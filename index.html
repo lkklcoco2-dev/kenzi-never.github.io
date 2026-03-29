@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阿志日語 | Kenzi Japanese</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #faf8f5;
+    --warm-brown: #8b6f47;
+    --light-brown: #c4a882;
+    --dark-brown: #4a3728;
+    --cream: #f2ece3;
+    --text: #2c2118;
+    --text-light: #7a6655;
+    --border: #e0d4c3;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    background: rgba(250,248,245,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.15em;
+    color: var(--dark-brown);
+  }
+
+  .nav-logo span {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.85rem;
+    color: var(--warm-brown);
+    display: block;
+    letter-spacing: 0.3em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--warm-brown); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 4rem 6rem 6rem;
+  }
+
+  .hero-tag {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    color: var(--warm-brown);
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.2s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--dark-brown);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.4s forwards;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    color: var(--warm-brown);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 2;
+    margin-bottom: 3rem;
+    max-width: 420px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.6s forwards;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1.2rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.8s forwards;
+  }
+
+  .btn-primary {
+    padding: 0.9rem 2.2rem;
+    background: var(--warm-brown);
+    color: var(--white);
+    border: none;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover {
+    background: var(--dark-brown);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    padding: 0.9rem 2.2rem;
+    background: transparent;
+    color: var(--warm-brown);
+    border: 1px solid var(--light-brown);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+  }
+
+  .btn-secondary:hover {
+    background: var(--cream);
+    transform: translateY(-2px);
+  }
+
+  .hero-right {
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-right::before {
+    content: '日';
+    font-family: 'Shippori Mincho', serif;
+    font-size: 28vw;
+    color: rgba(139,111,71,0.07);
+    position: absolute;
+    line-height: 1;
+  }
+
+  .hero-card {
+    background: var(--white);
+    padding: 3rem;
+    width: 340px;
+    border-left: 3px solid var(--warm-brown);
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeUp 1s ease 1s forwards;
+  }
+
+  .hero-card-tag {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--warm-brown);
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-card h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .hero-card p {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 2;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .stat-num {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.8rem;
+    color: var(--warm-brown);
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+  }
+
+  /* SECTION COMMON */
+  section { padding: 7rem 6rem; }
+
+  .section-tag {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.4em;
+    color: var(--warm-brown);
+    margin-bottom: 1.2rem;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 400;
+    color: var(--dark-brown);
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-desc {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 2.2;
+    max-width: 560px;
+  }
+
+  /* ABOUT */
+  #about {
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-box {
+    background: var(--white);
+    padding: 3.5rem;
+    border-top: 3px solid var(--warm-brown);
+  }
+
+  .about-name {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 2rem;
+    color: var(--dark-brown);
+    margin-bottom: 0.5rem;
+  }
+
+  .about-name-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    color: var(--warm-brown);
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-tag {
+    padding: 0.3rem 0.9rem;
+    border: 1px solid var(--light-brown);
+    font-size: 0.78rem;
+    color: var(--warm-brown);
+    letter-spacing: 0.05em;
+  }
+
+  /* COURSES */
+  #courses { background: var(--white); }
+
+  .courses-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+  }
+
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: var(--border);
+  }
+
+  .course-card {
+    background: var(--white);
+    padding: 3rem 2.5rem;
+    transition: background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .course-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--warm-brown);
+    transition: width 0.4s ease;
+  }
+
+  .course-card:hover { background: var(--cream); }
+  .course-card:hover::before { width: 100%; }
+
+  .course-num {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 3rem;
+    color: var(--border);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s;
+  }
+
+  .course-card:hover .course-num { color: var(--light-brown); }
+
+  .course-name {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.2rem;
+    color: var(--dark-brown);
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+  }
+
+  .course-price {
+    font-size: 0.85rem;
+    color: var(--warm-brown);
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.05em;
+  }
+
+  .course-desc {
+    font-size: 0.83rem;
+    color: var(--text-light);
+    line-height: 2;
+  }
+
+  /* CASES */
+  #cases { background: var(--cream); }
+
+  .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+
+  .case-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-left: 2px solid var(--border);
+    transition: border-color 0.3s;
+  }
+
+  .case-card:hover { border-color: var(--warm-brown); }
+
+  .case-before-after {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .case-label {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    color: var(--text-light);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .case-text {
+    font-size: 0.88rem;
+    line-height: 1.9;
+    color: var(--text);
+    background: var(--cream);
+    padding: 0.8rem 1rem;
+  }
+
+  .case-text.after {
+    background: #f0ebe3;
+    border-left: 2px solid var(--warm-brown);
+  }
+
+  .case-arrow {
+    color: var(--light-brown);
+    font-size: 1.2rem;
+  }
+
+  .case-note {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-style: italic;
+    line-height: 1.8;
+  }
+
+  /* CONTACT */
+  #contact {
+    background: var(--dark-brown);
+    color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  #contact .section-tag { color: var(--light-brown); }
+  #contact .section-title { color: var(--white); }
+  #contact .section-desc { color: rgba(255,255,255,0.6); }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    color: var(--light-brown);
+    margin-bottom: 0.6rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 0.9rem 1.2rem;
+    color: var(--white);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--light-brown);
+  }
+
+  .form-group select option { background: var(--dark-brown); }
+
+  .form-group textarea { height: 120px; resize: none; }
+
+  .form-submit {
+    width: 100%;
+    padding: 1rem;
+    background: var(--warm-brown);
+    color: var(--white);
+    border: none;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 0.5rem;
+  }
+
+  .form-submit:hover { background: var(--light-brown); }
+
+  .contact-info {
+    padding-top: 1rem;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 3rem;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.88rem;
+    transition: color 0.3s;
+  }
+
+  .contact-link:hover { color: var(--light-brown); }
+
+  .contact-link-icon {
+    width: 36px; height: 36px;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #2c1f14;
+    padding: 2rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.1em;
+  }
+
+  .footer-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 0.3em;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 1.2rem 2rem; }
+    .nav-links { gap: 1.5rem; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-left { padding: 4rem 2rem; }
+    .hero-right { display: none; }
+    section { padding: 5rem 2rem; }
+    #about { grid-template-columns: 1fr; gap: 3rem; }
+    .courses-grid { grid-template-columns: 1fr; }
+    .cases-grid { grid-template-columns: 1fr; }
+    #contact { grid-template-columns: 1fr; gap: 3rem; }
+    .courses-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    footer { padding: 1.5rem 2rem; flex-direction: column; gap: 0.8rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    阿志日語
+    <span>KENZI JAPANESE</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">關於我</a></li>
+    <li><a href="#courses">課程</a></li>
+    <li><a href="#cases">學生案例</a></li>
+    <li><a href="#contact">諮詢</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-tag">JAPANESE LANGUAGE TUTOR</p>
+    <h1 class="hero-title">
+      不只是學日文，<br>
+      是<em>真的用起來</em>。
+    </h1>
+    <p class="hero-sub">
+      從京都留學帶回來的教學方式，<br>
+      「提取－間隔－再鞏固」循環設計，<br>
+      讓你學到的東西真正留在腦子裡。
+    </p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-primary">預約免費諮詢</a>
+      <a href="#courses" class="btn-secondary">看課程內容</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-card">
+      <p class="hero-card-tag">TEACHING PHILOSOPHY</p>
+      <h3>學語言不是背單字，<br>是建立使用語感。</h3>
+      <p>每堂課都有輸出練習，確認你真的內化了，不是只是「看懂了」。</p>
+      <div class="hero-stats">
+        <div>
+          <span class="stat-num">55萬</span>
+          <span class="stat-label">Threads 瀏覽</span>
+        </div>
+        <div>
+          <span class="stat-num">京都</span>
+          <span class="stat-label">留學經歷</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-content reveal">
+    <span class="section-tag">ABOUT KENZI</span>
+    <h2 class="section-title">日語教師<br>也是手作飾品設計師</h2>
+    <p class="section-desc">
+      曾在京都留學，深刻體會到「在日本生活的日文」和「教科書的日文」之間的差距。<br><br>
+      所以我的課不教你「正確答案」，教你「怎麼說才像日本人」。台式日文怎麼修正、語感怎麼培養——這才是重點。
+    </p>
+    <div class="about-tags">
+      <span class="about-tag">京都留學</span>
+      <span class="about-tag">線上 / 線下授課</span>
+      <span class="about-tag">台式日文修正</span>
+      <span class="about-tag">手作飾品設計</span>
+      <span class="about-tag">一對一教學</span>
+    </div>
+  </div>
+  <div class="about-visual reveal">
+    <div class="about-box">
+      <span class="about-name-jp">KENZI ／ あじ</span>
+      <div class="about-name">阿志老師</div>
+      <p style="font-size:0.88rem; color:var(--text-light); line-height:2.2;">
+        教學核心：讓每個學生在課堂上「說出來」，而不只是「聽進去」。每週複習作業不是功課，是讓記憶定著的工具。
+      </p>
+      <div style="margin-top:2rem; padding-top:2rem; border-top:1px solid var(--border);">
+        <p style="font-family:'Noto Serif JP',serif; font-size:0.78rem; letter-spacing:0.2em; color:var(--warm-brown); margin-bottom:0.8rem;">授課方式</p>
+        <p style="font-size:0.85rem; color:var(--text-light); line-height:2;">一週建議兩堂 · 每堂 1.5～2 小時<br>前半段回顧 · 後半段新內容 · 課後複習作業</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses">
+  <div class="courses-header">
+    <div>
+      <span class="section-tag">COURSES</span>
+      <h2 class="section-title reveal">找到適合你的<br>學習方式</h2>
+    </div>
+    <a href="#contact" class="btn-secondary reveal">預約諮詢 →</a>
+  </div>
+  <div class="courses-grid">
+    <div class="course-card reveal">
+      <div class="course-num">01</div>
+      <div class="course-name">中級強化課</div>
+      <div class="course-price">NT$ 750 / 小時</div>
+      <p class="course-desc">卡在 N3～N2 之間？聽說讀寫全面強化，找出你的弱點，針對補強。</p>
+    </div>
+    <div class="course-card reveal">
+      <div class="course-num">02</div>
+      <div class="course-name">高級精修課</div>
+      <div class="course-price">NT$ 850 / 小時</div>
+      <p class="course-desc">口說語感精準調整，讓你說出來的日文更自然、更像在日本生活的人。</p>
+    </div>
+    <div class="course-card reveal">
+      <div class="course-num">03</div>
+      <div class="course-name">高階語法班</div>
+      <div class="course-price">NT$ 7,000 / 月</div>
+      <p class="course-desc">每月固定課程，系統化把語法弱點補起來。適合想穩定進步的學習者。</p>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section id="cases">
+  <span class="section-tag reveal">STUDENT CASES</span>
+  <h2 class="section-title reveal">台式日文修正<br>學生真實案例</h2>
+  <p class="section-desc reveal">很多人學了很久的日文，卻不知道自己一直用「台灣人說法」——這些都是課堂上真實發生的修正。</p>
+
+  <div class="cases-grid">
+    <div class="case-card reveal">
+      <div class="case-before-after">
+        <div>
+          <span class="case-label">BEFORE</span>
+          <div class="case-text">友達と話しています</div>
+        </div>
+        <div class="case-arrow">→</div>
+        <div>
+          <span class="case-label">AFTER</span>
+          <div class="case-text after">友達と話しています<br>（自然✓）</div>
+        </div>
+      </div>
+      <p class="case-note">進行式的使用時機，和中文不一樣——日文的「ている」還有很多意思。</p>
+    </div>
+    <div class="case-card reveal">
+      <div class="case-before-after">
+        <div>
+          <span class="case-label">BEFORE</span>
+          <div class="case-text">vているとvてある<br>的區別</div>
+        </div>
+        <div class="case-arrow">→</div>
+        <div>
+          <span class="case-label">AFTER</span>
+          <div class="case-text after">概念釐清後<br>能正確使用✓</div>
+        </div>
+      </div>
+      <p class="case-note">「漢字看得懂，不代表用法對」——這是最常見的台式日文問題。</p>
+    </div>
+    <div class="case-card reveal">
+      <div class="case-before-after">
+        <div>
+          <span class="case-label">BEFORE</span>
+          <div class="case-text">日文學習者<br>最容易混淆的用法</div>
+        </div>
+        <div class="case-arrow">→</div>
+        <div>
+          <span class="case-label">AFTER</span>
+          <div class="case-text after">透過實例<br>建立語感✓</div>
+        </div>
+      </div>
+      <p class="case-note">不背規則，從例子裡感受日文的邏輯——這才是真正學會的方式。</p>
+    </div>
+    <div class="case-card reveal">
+      <div class="case-before-after">
+        <div>
+          <span class="case-label">BEFORE</span>
+          <div class="case-text">2個月前<br>的寫作水平</div>
+        </div>
+        <div class="case-arrow">→</div>
+        <div>
+          <span class="case-label">AFTER</span>
+          <div class="case-text after">2個月後<br>明顯進步✓</div>
+        </div>
+      </div>
+      <p class="case-note">持續的輸出練習＋老師批改，讓學生清楚看到自己的進步軌跡。</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-info reveal">
+    <span class="section-tag">CONTACT</span>
+    <h2 class="section-title">不確定適合哪個課程？<br>先聊聊就好。</h2>
+    <p class="section-desc">告訴我你現在的程度和學習目標，我會幫你找到最適合的方式。</p>
+    <div class="contact-links">
+      <a href="https://www.threads.com/@kenzi_never" target="_blank" class="contact-link">
+        <div class="contact-link-icon">Th</div>
+        <span>@kenzi_never on Threads</span>
+      </a>
+      <a href="https://www.instagram.com/kenzi_never/" target="_blank" class="contact-link">
+        <div class="contact-link-icon">IG</div>
+        <span>@kenzi_never on Instagram</span>
+      </a>
+    </div>
+  </div>
+  <div class="reveal">
+    <div class="form-group">
+      <label>你的名字</label>
+      <input type="text" placeholder="怎麼稱呼你？">
+    </div>
+    <div class="form-group">
+      <label>目前程度</label>
+      <select>
+        <option value="">選擇程度</option>
+        <option>完全初學</option>
+        <option>N5 / 基礎</option>
+        <option>N4 / 初中級</option>
+        <option>N3 / 中級</option>
+        <option>N2 / 中高級</option>
+        <option>N1 / 高級</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>想諮詢的課程</label>
+      <select>
+        <option value="">選擇課程</option>
+        <option>中級強化課 NT$750/H</option>
+        <option>高級精修課 NT$850/H</option>
+        <option>高階語法班 NT$7,000/月</option>
+        <option>陪跑半年方案 NT$15,000</option>
+        <option>還不確定，想先聊聊</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>想說的話</label>
+      <textarea placeholder="你的學習目標、遇到的困難，或是任何想讓我知道的事……"></textarea>
+    </div>
+    <button class="form-submit" onclick="alert('謝謝你的訊息！阿志老師會盡快與你聯繫 🙂')">送出諮詢</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 阿志日語 Kenzi Japanese · All rights reserved</p>
+  <p class="footer-jp">日本語教室 · kenzi_never</p>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
