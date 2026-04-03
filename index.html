@@ -272,6 +272,93 @@
     max-width: 560px;
   }
 
+
+  /* INTENT */
+  #intent {
+    background: linear-gradient(to bottom, var(--white), #f7f1e9);
+  }
+
+  .intent-wrap {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    align-items: start;
+    margin-top: 3rem;
+  }
+
+  .intent-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 2.2rem;
+    box-shadow: 0 10px 30px rgba(74,55,40,0.04);
+  }
+
+  .intent-list {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .intent-list li {
+    padding-left: 1.8rem;
+    position: relative;
+    color: var(--text);
+    line-height: 1.9;
+    font-size: 0.95rem;
+  }
+
+  .intent-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--warm-brown);
+    font-weight: 500;
+  }
+
+  .intent-note {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 2;
+  }
+
+  .intent-side {
+    background: var(--cream);
+    padding: 2.2rem;
+    border-left: 3px solid var(--warm-brown);
+  }
+
+  .intent-side h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 400;
+    color: var(--dark-brown);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .intent-side p {
+    color: var(--text-light);
+    font-size: 0.92rem;
+    line-height: 2;
+    margin-bottom: 1.2rem;
+  }
+
+  .intent-mini {
+    display: grid;
+    gap: 0.8rem;
+    margin-top: 1.4rem;
+  }
+
+  .intent-mini div {
+    background: rgba(255,255,255,0.7);
+    padding: 0.9rem 1rem;
+    font-size: 0.88rem;
+    color: var(--text);
+    border: 1px solid rgba(139,111,71,0.12);
+  }
+
+
   /* ABOUT */
   #about {
     background: var(--cream);
@@ -412,10 +499,10 @@
 
   .case-before-after {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 1rem;
-    align-items: center;
-    margin-bottom: 1.5rem;
+  	grid-template-columns: 1fr auto 1fr;
+  	gap: 1rem;
+  	align-items: start;
+  	margin-bottom: 1.5rem;
   }
 
   .case-label {
@@ -590,20 +677,25 @@
   }
 
   /* RESPONSIVE */
-  @media (max-width: 900px) {
-    nav { padding: 1.2rem 1.5rem; flex-wrap: wrap; gap: 0.5rem; }
-    .nav-links { gap: 1rem; font-size: 0.8rem; }
-    .hero { grid-template-columns: 1fr; }
-    .hero-left { padding: 3rem 1.5rem; }
-    .hero-right { display: none; }
-    section { padding: 5rem 2rem; }
-    #about { grid-template-columns: 1fr; gap: 3rem; }
-    .courses-grid { grid-template-columns: 1fr; }
-    .cases-grid { grid-template-columns: 1fr; }
-    #contact { grid-template-columns: 1fr; gap: 3rem; }
-    .courses-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
-    footer { padding: 1.5rem 2rem; flex-direction: column; gap: 0.8rem; text-align: center; }
-  }
+ @media (max-width: 900px) {
+  	nav { padding: 1.2rem 1.5rem; flex-wrap: wrap; gap: 0.5rem; }
+ 	.nav-links { gap: 1rem; font-size: 0.8rem; }
+  	.hero { grid-template-columns: 1fr; }
+  	.hero-left { padding: 3rem 1.5rem; }
+  	.hero-title { font-size: clamp(1.55rem, 8vw, 2.4rem); line-height: 1.35; max-width: 8.5em; }
+  	.hero-sub { max-width: 30ch; }
+  	.hero-right { display: none; }
+  	section { padding: 5rem 2rem; }
+  	#about { grid-template-columns: 1fr; gap: 3rem; }
+  	.intent-wrap { grid-template-columns: 1fr; }
+  	.courses-grid { grid-template-columns: 1fr; }
+  	.cases-grid { grid-template-columns: 1fr; }
+  	#contact { grid-template-columns: 1fr; gap: 3rem; }
+  	.courses-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  	footer { padding: 1.5rem 2rem; flex-direction: column; gap: 0.8rem; text-align: center; }
+  	.case-before-after { grid-template-columns: 1fr; }
+  	.case-arrow { transform: rotate(90deg); text-align: center; }
+	}
 </style>
 </head>
 <body>
@@ -628,30 +720,30 @@
     <p class="hero-tag">JAPANESE LANGUAGE TUTOR</p>
     <h1 class="hero-title">
       不只是學日文，<br>
-      是<em>真的用起來</em>。
+      是<em>自然活用日文</em>。
     </h1>
     <p class="hero-sub">
-      從京都留學帶回來的教學方式，<br>
-      「提取－間隔－再鞏固」循環設計，<br>
-      讓你學到的東西真正留在腦子裡。
+      不是只教你文法對不對，<br>
+      而是幫你找出為什麼句子看起來沒錯，<br>
+      但聽起來還是不自然。
     </p>
     <div class="hero-cta">
-      <a href="#contact" class="btn-primary">預約免費諮詢</a>
-      <a href="#courses" class="btn-secondary">看課程內容</a>
+      <a href="#contact" class="btn-primary">先讓我看一小段日文</a>
+      <a href="#intent" class="btn-secondary">我適合哪種課？</a>
     </div>
   </div>
   <div class="hero-right">
     <div class="hero-card">
       <p class="hero-card-tag">TEACHING PHILOSOPHY</p>
-      <h3>學語言不是背單字，<br>是建立使用語感。</h3>
-      <p>每堂課都有輸出練習，確認你真的內化了，不是只是「看懂了」。</p>
+      <h3>很多人的問題不是不會，<br>而是寫出來還是怪。</h3>
+      <p>我會直接幫你看句子卡在哪，是文法、中文思考，還是語感還沒校正到位。</p>
       <div class="hero-stats">
         <div>
-          <span class="stat-num">55萬</span>
+          <span class="stat-num">56萬</span>
           <span class="stat-label">Threads 瀏覽</span>
         </div>
         <div>
-          <span class="stat-num">京都</span>
+          <span class="stat-num">日本</span>
           <span class="stat-label">留學經歷</span>
         </div>
       </div>
@@ -659,17 +751,49 @@
   </div>
 </section>
 
+
+<section id="intent">
+  <span class="section-tag reveal">IS THIS FOR YOU?</span>
+  <h2 class="section-title reveal">你是不是也有這些卡點？</h2>
+  <p class="section-desc reveal">這一頁不是給每個人看的。比較適合已經學過一段時間、但總覺得自己的日文「哪裡怪怪的」的人。</p>
+
+  <div class="intent-wrap">
+    <div class="intent-card reveal">
+      <ul class="intent-list">
+        <li>文法和單字都學過了，但寫出來還是常常不自然。</li>
+        <li>N3～N2 卡關，選項常常只差一點，卻總是選錯。</li>
+        <li>知道自己常把中文邏輯直接帶進日文，卻抓不到哪裡怪。</li>
+        <li>自學很久，但沒有人幫你看句子，所以一直在同樣地方打轉。</li>
+        <li>想要的不只是考試分數，而是真的能把日文用出來。</li>
+      </ul>
+      <p class="intent-note">如果你剛好就是這一型，網站下面的學生案例和課程介紹，會比一般「課程價目表」更適合你看。</p>
+    </div>
+
+    <div class="intent-side reveal">
+      <h3>你可以先不用急著報名。</h3>
+      <p>先讓我看你一小段日文，我會先幫你判斷：你是文法還沒穩、中文思考影響太大，還是其實只差最後的語感修正。</p>
+      <a href="#contact" class="btn-primary">先看我適不適合你</a>
+      <div class="intent-mini">
+        <div>適合：台式日文修正、N3～N2卡關、自學陪跑</div>
+        <div>不適合：只想找最低價、完全不想做輸出練習的人</div>
+        <div>方式：可先從短文、作文或一句卡住的日文開始</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ABOUT -->
 <section id="about">
   <div class="about-content reveal">
     <span class="section-tag">ABOUT KENZI</span>
     <h2 class="section-title">日語教師<br>也是手作飾品設計師</h2>
     <p class="section-desc">
-      曾在京都留學，深刻體會到「在日本生活的日文」和「教科書的日文」之間的差距。<br><br>
-      所以我的課不教你「正確答案」，教你「怎麼說才像日本人」。台式日文怎麼修正、語感怎麼培養——這才是重點。
+      曾在日本留學，深刻體會到「在日本生活的日文」和「教科書的日文」之間的差距。<br><br>
+      所以我的課不只教你「正確答案」，更會教你「哪裡不自然、為什麼怪、怎麼改才像日本人在用的日文」。台式日文怎麼修正、語感怎麼培養——這才是重點。
     </p>
     <div class="about-tags">
-      <span class="about-tag">京都留學</span>
+      <span class="about-tag">日本留學</span>
       <span class="about-tag">線上 / 線下授課</span>
       <span class="about-tag">台式日文修正</span>
       <span class="about-tag">手作飾品設計</span>
@@ -678,10 +802,10 @@
   </div>
   <div class="about-visual reveal">
     <div class="about-box">
-      <span class="about-name-jp">KENZI ／ あじ</span>
+      <span class="about-name-jp">KENZI ／ けんし</span>
       <div class="about-name">阿志老師</div>
       <p style="font-size:0.88rem; color:var(--text-light); line-height:2.2;">
-        教學核心：讓每個學生在課堂上「說出來」，而不只是「聽進去」。每週複習作業不是功課，是讓記憶定著的工具。
+        教學核心：讓每個學生在課堂上「真的用出來」，而不只是「聽懂」。每週複習作業不是交差，而是幫你把學過的內容留住。
       </p>
       <div style="margin-top:2rem; padding-top:2rem; border-top:1px solid var(--border);">
         <p style="font-family:'Noto Serif JP',serif; font-size:0.78rem; letter-spacing:0.2em; color:var(--warm-brown); margin-bottom:0.8rem;">授課方式</p>
@@ -703,21 +827,21 @@
   <div class="courses-grid">
     <div class="course-card reveal">
       <div class="course-num">01</div>
-      <div class="course-name">中級強化課</div>
+      <div class="course-name">N4-N3--台式日文修正課</div>
       <div class="course-price">NT$ 750 / 小時</div>
-      <p class="course-desc">卡在 N3～N2 之間？聽說讀寫全面強化，找出你的弱點，針對補強。</p>
+      <p class="course-desc">適合初級，或學過文法卻還是常覺得句子怪怪的人。重點不是背更多，而是把不自然的地方修成真的能用的日文。</p>
     </div>
     <div class="course-card reveal">
       <div class="course-num">02</div>
-      <div class="course-name">高級精修課</div>
+      <div class="course-name">N2-N1-卡關補強</div>
       <div class="course-price">NT$ 850 / 小時</div>
-      <p class="course-desc">口說語感精準調整，讓你說出來的日文更自然、更像在日本生活的人。</p>
+      <p class="course-desc">適合考試總是差一點的人。把常錯文法、閱讀判斷和語感問題拉出來，集中補強。</p>
     </div>
     <div class="course-card reveal">
       <div class="course-num">03</div>
-      <div class="course-name">高階語法班</div>
+      <div class="course-name">自學陪跑課程</div>
       <div class="course-price">NT$ 7,000 / 月</div>
-      <p class="course-desc">每月固定課程，系統化把語法弱點補起來。適合想穩定進步的學習者。</p>
+      <p class="course-desc">適合自己念得下去、但不知道怎麼排進度的人。幫你安排節奏、回顧、輸出與檢討，不再一個人亂學。</p>
     </div>
   </div>
 </section>
@@ -726,65 +850,137 @@
 <section id="cases">
   <span class="section-tag reveal">STUDENT CASES</span>
   <h2 class="section-title reveal">台式日文修正<br>學生真實案例</h2>
-  <p class="section-desc reveal">很多人學了很久的日文，卻不知道自己一直用「台灣人說法」——這些都是課堂上真實發生的修正。</p>
+  <p class="section-desc reveal">很多人不是不會，而是沒有人告訴他：哪裡其實還是中文邏輯、哪裡聽起來不像日文。這些都是課堂上真實發生的修正案例。</p>
 
   <div class="cases-grid">
     <div class="case-card reveal">
-      <div class="case-before-after">
-        <div>
-          <span class="case-label">BEFORE</span>
-          <div class="case-text">友達と話しています</div>
-        </div>
-        <div class="case-arrow">→</div>
-        <div>
-          <span class="case-label">AFTER</span>
-          <div class="case-text after">友達と話しています<br>（自然✓）</div>
-        </div>
+  	<div class="case-before-after">
+    	<div>
+      	<span class="case-label">BEFORE</span>
+      	<img src="image/student01.jpg" style="width:100%; border-radius:4px;">
+    	</div>
+    <div class="case-arrow">→</div>
+    <div>
+      <span class="case-label">AFTER</span>
+       <div class="case-text after" style="
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      ">
+        學生想要表達想找房子，這裡要使用探したい會比較然。
       </div>
-      <p class="case-note">進行式的使用時機，和中文不一樣——日文的「ている」還有很多意思。</p>
     </div>
+  </div>
+  <p class="case-note">上課兩個月・從零開始・已能自由表達</p>
+</div>
     <div class="case-card reveal">
-      <div class="case-before-after">
-        <div>
-          <span class="case-label">BEFORE</span>
-          <div class="case-text">vているとvてある<br>的區別</div>
-        </div>
-        <div class="case-arrow">→</div>
-        <div>
-          <span class="case-label">AFTER</span>
-          <div class="case-text after">概念釐清後<br>能正確使用✓</div>
-        </div>
+  	<div class="case-before-after">
+    	<div>
+      	<span class="case-label">BEFORE</span>
+      	<img src="image/student02.jpg" style="width:100%; border-radius:4px;">
+    	</div>
+    <div class="case-arrow">→</div>
+    <div>
+      <span class="case-label">AFTER</span>
+       <div class="case-text after" style="
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      ">
+        這裡的濡れました，如果改成濡れてしまいました更能表達林詩的心情。
       </div>
-      <p class="case-note">「漢字看得懂，不代表用法對」——這是最常見的台式日文問題。</p>
     </div>
+  </div>
+  <p class="case-note">上課兩個月・從零開始・已能自由表達</p>
+</div>
     <div class="case-card reveal">
-      <div class="case-before-after">
-        <div>
-          <span class="case-label">BEFORE</span>
-          <div class="case-text">日文學習者<br>最容易混淆的用法</div>
-        </div>
-        <div class="case-arrow">→</div>
-        <div>
-          <span class="case-label">AFTER</span>
-          <div class="case-text after">透過實例<br>建立語感✓</div>
-        </div>
+  	<div class="case-before-after">
+    	<div>
+      	<span class="case-label">BEFORE</span>
+      	<img src="image/student03.jpg" style="width:100%; border-radius:4px;">
+    	</div>
+    <div class="case-arrow">→</div>
+    <div>
+      <span class="case-label">AFTER</span>
+       <div class="case-text after" style="
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      ">
+        這位同學原本程度就不低，但句子的だから換成そのため更能表達因此...。
       </div>
-      <p class="case-note">不背規則，從例子裡感受日文的邏輯——這才是真正學會的方式。</p>
     </div>
+  </div>
+  <p class="case-note">轉班生・正在矯正思考方式・目標是考上N1</p>
+</div>
     <div class="case-card reveal">
-      <div class="case-before-after">
-        <div>
-          <span class="case-label">BEFORE</span>
-          <div class="case-text">2個月前<br>的寫作水平</div>
-        </div>
-        <div class="case-arrow">→</div>
-        <div>
-          <span class="case-label">AFTER</span>
-          <div class="case-text after">2個月後<br>明顯進步✓</div>
-        </div>
+  	<div class="case-before-after">
+    	<div>
+      	<span class="case-label">BEFORE</span>
+      	<img src="image/student04.jpg" style="width:100%; border-radius:4px;">
+    	</div>
+    <div class="case-arrow">→</div>
+    <div>
+      <span class="case-label">AFTER</span>
+       <div class="case-text after" style="
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      ">
+        と等的誤用應該是要用や、等，最後表示評價可用のは來表達會更好。
       </div>
-      <p class="case-note">持續的輸出練習＋老師批改，讓學生清楚看到自己的進步軌跡。</p>
     </div>
+  </div>
+  <p class="case-note">轉班生・觀念糾正・減少錯誤，目標七月的N2</p>
+</div>
+<div class="case-card reveal">
+  	<div class="case-before-after">
+    	<div>
+      	<span class="case-label">BEFORE</span>
+      	<img src="image/student05.jpg" style="width:100%; border-radius:4px;">
+    	</div>
+    <div class="case-arrow">→</div>
+    <div>
+      <span class="case-label">AFTER</span>
+       <div class="case-text after" style="
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      ">
+        まるでハムスター這樣更能表達如同哈姆太郎，還有太常使用だから這也是中文語系學生容易出現的問題。
+      </div>
+    </div>
+  </div>
+  <p class="case-note">觀念慢慢導正・減少錯誤・目標年底N3</p>
+</div>	  
+<div class="case-card reveal">
+  	<div class="case-before-after">
+    	<div>
+      	<span class="case-label">BEFORE</span>
+      	<img src="image/student06.jpg" style="width:100%; border-radius:4px;">
+    	</div>
+    <div class="case-arrow">→</div>
+    <div>
+      <span class="case-label">AFTER</span>
+       <div class="case-text after" style="
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      ">
+        動詞中表達期間或進行的ています觀念須修正，還有日文邏輯觀念的修正。
+      </div>
+    </div>
+  </div>
+  <p class="case-note">上課一個多月・從零開始・已能自由表達</p>
+</div>	  
+	  <br>
+
   </div>
 </section>
 
@@ -792,8 +988,8 @@
 <section id="contact">
   <div class="contact-info reveal">
     <span class="section-tag">CONTACT</span>
-    <h2 class="section-title">不確定適合哪個課程？<br>先聊聊就好。</h2>
-    <p class="section-desc">告訴我你現在的程度和學習目標，我會幫你找到最適合的方式。</p>
+    <h2 class="section-title">不確定自己卡在哪？<br>先丟一小段日文給我。</h2>
+    <p class="section-desc">你可以直接貼一句、短文、作文或最近卡住的句子。我會先幫你看：是文法問題、中文思考影響，還是表達方式還沒自然。</p>
     <div class="contact-links">
       <a href="https://www.threads.com/@kenzi_never" target="_blank" class="contact-link">
         <div class="contact-link-icon">Th</div>
@@ -806,39 +1002,28 @@
     </div>
   </div>
   <div class="reveal">
-    <div class="form-group">
-      <label>你的名字</label>
-      <input type="text" placeholder="怎麼稱呼你？">
+    <div class="intent-card" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.12); box-shadow:none;">
+      <!--<div class="form-group">
+        <label>你現在最卡的是</label>
+        <select>
+          <option value="">選擇一項</option>
+          <option>文法和單字都學過，但句子還是不自然</option>
+          <option>N3～N2 卡關，選項總是差一點</option>
+          <option>自學很久，但抓不到自己哪裡怪</option>
+          <option>想找陪跑 / 固定檢討</option>
+          <option>還不確定，想先問問看</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>可以直接貼給我的內容</label>
+        <textarea placeholder="例如：一句你覺得怪怪的日文、最近寫的作文、目前程度、預計考試時間……"></textarea>
+      </div>-->
+	  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDqihvnuNiWiZIa9I9qDSHZj5tTcitJ0KhVo7oDTXr66Mpow/viewform?usp=header" target="_blank" class="form-submit" style="display:block; text-align:center; text-decoration:none;">前往填寫諮詢表單</a>	
+      <a href="https://www.instagram.com/kenzi_never/" target="_blank" class="form-submit" style="display:block; text-align:center; text-decoration:none;">直接到 IG 找我</a>
+      <a href="https://www.threads.com/@kenzi_never" target="_blank" class="btn-secondary" style="display:block; text-align:center; margin-top:1rem; border-color:rgba(255,255,255,0.2); color:var(--white);">先去 Threads 看更多案例</a>
+      <p style="margin-top:1rem; font-size:0.82rem; color:rgba(255,255,255,0.55); line-height:1.9;">還沒準備好報名也沒關係。先讓我看一小段，我再跟你說你比較適合哪一種課。</p>
     </div>
-    <div class="form-group">
-      <label>目前程度</label>
-      <select>
-        <option value="">選擇程度</option>
-        <option>完全初學</option>
-        <option>N5 / 基礎</option>
-        <option>N4 / 初中級</option>
-        <option>N3 / 中級</option>
-        <option>N2 / 中高級</option>
-        <option>N1 / 高級</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>想諮詢的課程</label>
-      <select>
-        <option value="">選擇課程</option>
-        <option>中級強化課 NT$750/H</option>
-        <option>高級精修課 NT$850/H</option>
-        <option>高階語法班 NT$7,000/月</option>
-        <option>陪跑半年方案 NT$15,000</option>
-        <option>還不確定，想先聊聊</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>想說的話</label>
-      <textarea placeholder="你的學習目標、遇到的困難，或是任何想讓我知道的事……"></textarea>
-    </div>
-    <button class="form-submit" onclick="alert('謝謝你的訊息！阿志老師會盡快與你聯繫 🙂')">送出諮詢</button>
-  </div>
+  </div>  
 </section>
 
 <!-- FOOTER -->
