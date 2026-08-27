@@ -104,6 +104,17 @@ h1 em{font-family:"Playfair Display",serif;font-style:normal;color:var(--sage);f
 .section-heading h2,.feature-copy h2,.about-copy h2,.contact-copy h2{font-size:clamp(2.1rem,4vw,4rem);line-height:1.17;letter-spacing:-.04em;margin-bottom:18px}
 .section-heading>p:last-child,.feature-copy>p,.about-copy>p,.contact-copy>p{color:var(--muted)}
 .course-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.recruitment-section{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch}
+.recruitment-copy,.recruitment-facts{border:1px solid var(--line);border-radius:36px;padding:clamp(28px,5vw,54px);background:linear-gradient(145deg,rgba(35,63,47,.9),rgba(12,29,20,.92));box-shadow:var(--shadow)}
+.recruitment-copy h2{font-size:clamp(2.25rem,4.5vw,4.5rem);line-height:1.12;letter-spacing:-.045em;margin:18px 0}
+.recruitment-copy>p{color:var(--muted);max-width:620px}
+.recruitment-badge{display:inline-flex;border:1px solid rgba(212,178,118,.45);background:rgba(212,178,118,.1);color:var(--cream);padding:8px 14px;border-radius:999px;font-weight:800}
+.recruitment-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.recruitment-facts{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:linear-gradient(145deg,rgba(242,227,199,.12),rgba(26,49,36,.82))}
+.recruitment-facts>div{border:1px solid var(--line);border-radius:22px;padding:20px;background:rgba(5,16,10,.28)}
+.recruitment-facts span,.video-meta,.lesson-meta{display:block;color:var(--gold);font-size:.7rem;font-weight:800;letter-spacing:.13em}
+.recruitment-facts strong,.recruitment-facts small{display:block}.recruitment-facts strong{font-size:1.18rem;margin:4px 0}.recruitment-facts small{color:var(--muted)}
+.recruitment-facts>p{grid-column:1/-1;margin:4px 0 0;color:var(--cream);font-weight:700}
 .course-card{
   position:relative;min-height:390px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);
   cursor:pointer;transform-style:preserve-3d;transition:transform .25s ease;
@@ -126,6 +137,19 @@ h1 em{font-family:"Playfair Display",serif;font-style:normal;color:var(--sage);f
 .stats strong{font-size:3.4rem;color:var(--cream)}.stats b{color:var(--gold);margin-left:3px}.stats span{display:block;color:var(--muted)}
 .daily-lesson-section{padding-top:120px}
 .daily-lesson-section .section-heading{max-width:880px}
+.latest-lesson-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.lesson-card{position:relative;display:flex;flex-direction:column;min-height:340px;border:1px solid var(--line);border-radius:28px;padding:28px;background:linear-gradient(145deg,rgba(31,60,44,.88),rgba(10,27,18,.94));box-shadow:var(--shadow);overflow:hidden}
+.lesson-card::after{content:attr(data-level);position:absolute;right:-6px;bottom:-28px;font-family:"Playfair Display",serif;font-size:7rem;font-weight:800;color:rgba(242,227,199,.035)}
+.lesson-card h3{font-size:1.55rem;line-height:1.35;margin:14px 0 12px}.lesson-card p{color:var(--muted);margin-bottom:24px;position:relative;z-index:1}
+.lesson-card .lesson-link{margin-top:auto;color:var(--cream);font-weight:800;position:relative;z-index:1}.lesson-card .lesson-link:hover{color:var(--gold)}
+.lesson-archive{margin-top:28px;border:1px solid var(--line);border-radius:30px;padding:clamp(24px,4vw,38px);background:rgba(8,24,15,.55)}
+.archive-heading{display:flex;justify-content:space-between;align-items:center;gap:24px}.archive-heading h3{font-size:clamp(1.7rem,3vw,2.7rem);margin:0}.archive-heading .eyebrow{margin-bottom:8px}
+.archive-toggle{border:1px solid var(--line);border-radius:999px;padding:11px 18px;background:transparent;color:var(--cream);font-weight:700}
+.archive-toggle:hover{background:rgba(255,255,255,.06)}
+.archive-list{display:none;margin-top:28px}.archive-list.open{display:grid}
+.archive-item{display:grid;grid-template-columns:110px 160px 1fr auto;gap:18px;align-items:center;padding:18px 0;border-top:1px solid var(--line)}
+.archive-item time,.archive-item span{color:var(--muted);font-size:.86rem}.archive-item strong{font-size:1.02rem}.archive-item a{color:var(--gold);white-space:nowrap}
+.data-fallback{color:var(--muted)}
 .lesson-article{border:1px solid var(--line);border-radius:36px;padding:clamp(26px,5vw,58px);background:linear-gradient(145deg,rgba(31,60,44,.88),rgba(10,27,18,.94));box-shadow:var(--shadow);overflow:hidden;position:relative}
 .lesson-article::before{content:"に・で";position:absolute;right:-24px;top:-92px;color:rgba(242,227,199,.035);font-size:15rem;font-weight:800;line-height:1;pointer-events:none}
 .lesson-lead{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:end;padding-bottom:36px;border-bottom:1px solid var(--line);position:relative}
@@ -150,6 +174,11 @@ h1 em{font-family:"Playfair Display",serif;font-style:normal;color:var(--sage);f
 .lesson-footer{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-top:28px}
 .lesson-footer p{margin:0;color:var(--cream);font-weight:700}
 .lesson-footer .button{white-space:nowrap}
+.theater-section{padding-top:110px}
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.video-card{border:1px solid var(--line);border-radius:28px;overflow:hidden;background:linear-gradient(145deg,rgba(30,52,40,.82),rgba(10,24,16,.92));box-shadow:var(--shadow)}
+.video-frame{position:relative;aspect-ratio:16/9;background:#050b07}.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-copy{padding:22px}.video-copy h3{font-size:1.35rem;margin:8px 0}.video-copy p{color:var(--muted);font-size:.92rem;margin:0}
 .work-tabs{display:flex;gap:10px;margin-bottom:30px;flex-wrap:wrap}
 .work-tabs button{border:1px solid var(--line);background:transparent;color:var(--muted);padding:10px 18px;border-radius:999px}
 .work-tabs button.active{color:#173025;background:var(--cream)}
@@ -185,18 +214,21 @@ dialog::backdrop{background:rgba(2,8,5,.76);backdrop-filter:blur(7px)}
   .main-nav{position:absolute;top:64px;left:0;right:0;display:none;flex-direction:column;align-items:stretch;background:#102219;border:1px solid var(--line);border-radius:24px;padding:18px}
   .main-nav.open{display:flex}.menu-toggle{display:block}
   .hero{grid-template-columns:1fr;padding-top:140px}.hero-panel{min-height:440px}
-  .course-grid,.feature-section,.about-section,.contact-section{grid-template-columns:1fr}
+  .course-grid,.feature-section,.about-section,.contact-section,.recruitment-section{grid-template-columns:1fr}
   .lesson-lead,.lesson-compare{grid-template-columns:1fr}.lesson-lead{gap:20px}
   .feature-copy{position:static}.stats{grid-template-columns:1fr 1fr;gap:25px}.stats>div:nth-child(2){border-right:0}
-  .work-grid{grid-template-columns:1fr 1fr}.contact-section{padding:34px;gap:30px}
+  .work-grid,.latest-lesson-grid{grid-template-columns:1fr 1fr}.video-grid{grid-template-columns:1fr}.contact-section{padding:34px;gap:30px}
+  .archive-item{grid-template-columns:95px 130px 1fr}.archive-item a{grid-column:3}
 }
 @media(max-width:620px){
   .hero{padding-inline:0;gap:35px}.hero-panel{min-height:390px;padding:22px}.orbit-3{width:300px;height:300px}
-  .course-grid,.work-grid{grid-template-columns:1fr}.course-card{min-height:330px}
+  .course-grid,.work-grid,.latest-lesson-grid{grid-template-columns:1fr}.course-card{min-height:330px}
   .intro-strip{font-size:.75rem;gap:12px;padding-inline:10px}
   .stats{grid-template-columns:1fr 1fr}.stats strong{font-size:2.5rem}
   .contact-actions{grid-template-columns:1fr}.primary-action{grid-column:auto}
   .lesson-article{border-radius:26px}.lesson-rule{grid-template-columns:1fr;gap:6px}.lesson-footer{align-items:flex-start;flex-direction:column}
+  .recruitment-facts{grid-template-columns:1fr}.recruitment-facts>p{grid-column:auto}
+  .archive-heading{align-items:flex-start;flex-direction:column}.archive-item{grid-template-columns:1fr;gap:4px}.archive-item a{grid-column:auto;margin-top:6px}
   footer{flex-direction:column;align-items:flex-start;gap:20px}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
