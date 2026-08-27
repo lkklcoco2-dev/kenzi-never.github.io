@@ -85,3 +85,66 @@ document.querySelectorAll('.work-tabs button').forEach(button => {
     });
   });
 });
+
+const escapeHtml = value => String(value).replace(/[&<>'"]/g, char => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+})[char]);
+
+async function loadPreviewData() {
+  try {
+    const [lessonResponse, videoResponse] = await Promise.all([
+      fetch('data/lessons.json'),
+      fetch('data/daidai-videos.json')
+    ]);
+    if (!lessonResponse.ok || !videoResponse.ok) throw new Error('資料載入失敗');
+    const lessons = await lessonResponse.json();
+    const videos = await videoResponse.json();
+
+    const latest = lessons.filter(item => item.featured).slice(0, 3);
+    document.querySelector('#latestLessons').innerHTML = latest.map(item => `
+      <article class="lesson-card reveal" data-level="${escapeHtml(item.level)}">
+        <span class="lesson-meta">${escapeHtml(item.date)} · ${escapeHtml(item.category)} · ${escapeHtml(item.level)}</span>
+        <h3>${escapeHtml(item.title)}</h3>
+        <p>${escapeHtml(item.summary)}</p>
+        <a class="lesson-link" href="${escapeHtml(item.source)}" target="_blank" rel="noopener noreferrer">閱讀教學原文 ↗</a>
+      </article>
+    `).join('');
+
+    document.querySelector('#lessonArchive').innerHTML = lessons.map(item => `
+      <article class="archive-item">
+        <time datetime="${escapeHtml(item.dateIso)}">${escapeHtml(item.date)}</time>
+        <span>${escapeHtml(item.category)} · ${escapeHtml(item.level)}</span>
+        <strong>${escapeHtml(item.title)}</strong>
+        <a href="${escapeHtml(item.source)}" target="_blank" rel="noopener noreferrer">查看 ↗</a>
+      </article>
+    `).join('');
+
+    document.querySelector('#videoGrid').innerHTML = videos.map(item => `
+      <article class="video-card reveal">
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/${escapeHtml(item.youtubeId)}" title="${escapeHtml(item.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="video-copy">
+          <span class="video-meta">${escapeHtml(item.date)} · ${escapeHtml(item.type)}</span>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.description)}</p>
+        </div>
+      </article>
+    `).join('');
+
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => revealObserver.observe(el));
+  } catch (error) {
+    document.querySelector('#latestLessons').innerHTML = '<p class="data-fallback">教學資料暫時無法載入，請稍後重新整理。</p>';
+    document.querySelector('#videoGrid').innerHTML = '<p class="data-fallback">影片資料暫時無法載入，請稍後重新整理。</p>';
+  }
+}
+
+const archiveToggle = document.querySelector('#archiveToggle');
+archiveToggle.addEventListener('click', () => {
+  const archive = document.querySelector('#lessonArchive');
+  const open = archive.classList.toggle('open');
+  archiveToggle.setAttribute('aria-expanded', String(open));
+  archiveToggle.textContent = open ? '收合教學歸檔' : '展開全部 10 篇';
+});
+
+loadPreviewData();
