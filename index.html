@@ -29,8 +29,10 @@
     </button>
     <nav class="main-nav" aria-label="主要導覽">
       <a href="#courses">課程</a>
+      <a href="#recruitment">招生</a>
       <a href="#features">特色</a>
-      <a href="#daily-lesson">每日教學</a>
+      <a href="#daily-lesson">最新教學</a>
+      <a href="#theater">呆呆羊</a>
       <a href="#works">作品</a>
       <a href="#about">關於</a>
       <a class="nav-cta" href="#contact">預約諮詢</a>
@@ -47,7 +49,7 @@
         <p class="hero-copy">從初級、JLPT 文法到翻譯訓練，以清楚比較、情境例句與個別回饋，陪你建立可以長久使用的日文能力。</p>
         <div class="hero-actions">
           <a class="button primary" href="#courses">探索課程</a>
-          <a class="button ghost" href="#works">查看教學作品</a>
+          <a class="button ghost" href="#daily-lesson">查看最新教學</a>
         </div>
       </div>
 
@@ -66,6 +68,26 @@
           <strong data-count="4">0</strong>
           <span>教學循環步驟</span>
         </div>
+      </div>
+    </section>
+
+    <section class="section recruitment-section" id="recruitment">
+      <div class="recruitment-copy reveal">
+        <p class="eyebrow">SEPTEMBER CLASS · NOW ENROLLING</p>
+        <span class="recruitment-badge">9 月小班招生中</span>
+        <h2>呆呆羊負責可愛，<br>日文就交給阿志。</h2>
+        <p>適合想從零開始、重新打穩基礎，或準備 JLPT N5／N4 的同學。小班最多六人，保留充足的互動與提問時間。</p>
+        <div class="recruitment-actions">
+          <a class="button primary" href="#contact">詢問課程</a>
+          <a class="button ghost" href="https://www.instagram.com/p/Dcf8CthkcPY/" target="_blank" rel="noopener noreferrer">查看招生貼文 ↗</a>
+        </div>
+      </div>
+      <div class="recruitment-facts reveal delay-1" aria-label="九月小班課程資訊">
+        <div><span>LOCATION</span><strong>台北市華陰街</strong><small>台北京站百貨旁／台北車站附近</small></div>
+        <div><span>SCHEDULE</span><strong>每週一、四</strong><small>21:00～22:00</small></div>
+        <div><span>CLASS SIZE</span><strong>最多 6 人</strong><small>2 人即可開班</small></div>
+        <div><span>LEVEL & FEE</span><strong>零基礎～N4</strong><small>每月 9,000 元</small></div>
+        <p>線上一對一家教亦持續招生中。</p>
       </div>
     </section>
 
@@ -165,62 +187,31 @@
 
     <section class="section daily-lesson-section" id="daily-lesson">
       <div class="section-heading reveal">
-        <p class="eyebrow">DAILY JAPANESE NOTE · 2026.08.13</p>
-        <h2>には、では怎麼分？<br>先把「は」拿掉就清楚了</h2>
-        <p>兩個看起來只差一個助詞，真正的判斷關鍵不是中文翻譯，而是這個位置原本該用「に」還是「で」。</p>
+        <p class="eyebrow">LATEST JAPANESE NOTES</p>
+        <h2>本週最新教學</h2>
+        <p>首頁保留最新三篇，較早的內容會自動進入教學歸檔，不需要刪除舊文章。</p>
       </div>
-
-      <article class="lesson-article reveal" aria-labelledby="lesson-niwa-dewa">
-        <div class="lesson-lead">
+      <div class="latest-lesson-grid" id="latestLessons" aria-live="polite"></div>
+      <div class="lesson-archive reveal">
+        <div class="archive-heading">
           <div>
-            <span class="lesson-kicker">助詞比較</span>
-            <h3 id="lesson-niwa-dewa"><span>には</span> ＝ に＋は<br><span>では</span> ＝ で＋は</h3>
+            <p class="eyebrow">LESSON ARCHIVE</p>
+            <h3>全部教學文章</h3>
           </div>
-          <p>先理解「に」和「で」各自負責的功能，再看「は」如何把那一部分提出來當主題或形成對比。</p>
+          <button class="archive-toggle" id="archiveToggle" aria-expanded="false">展開全部 10 篇</button>
         </div>
+        <div class="archive-list" id="lessonArchive"></div>
+      </div>
+      <noscript><p class="data-fallback">請開啟 JavaScript 查看本週教學文章。</p></noscript>
+    </section>
 
-        <div class="lesson-compare">
-          <section class="grammar-panel niwa-panel">
-            <p class="grammar-label">には · NIWA</p>
-            <h4>對象、時間、目的、存在地點</h4>
-            <div class="example-block">
-              <strong>私には難しい。</strong>
-              <span>對我來說很難。</span>
-            </div>
-            <div class="example-block">
-              <strong>日本で働くには、日本語が必要。</strong>
-              <span>要在日本工作的話，需要日文。</span>
-            </div>
-          </section>
-
-          <section class="grammar-panel dewa-panel">
-            <p class="grammar-label">では · DEWA</p>
-            <h4>場所、範圍、情況</h4>
-            <div class="example-block">
-              <strong>日本では、電車が便利です。</strong>
-              <span>在日本，電車很方便。</span>
-            </div>
-            <div class="example-block">
-              <strong>このままでは間に合いません。</strong>
-              <span>照這樣下去會來不及。</span>
-            </div>
-          </section>
-        </div>
-
-        <div class="lesson-rule">
-          <span class="rule-number">01</span>
-          <div>
-            <p class="grammar-label">最實用的判斷方式</p>
-            <h4>先把「は」拿掉。</h4>
-            <p>原本是「に」→ 加上「は」變成「には」；原本是「で」→ 加上「は」變成「では」。所以真正要看的是：「這裡本來該用に，還是で？」</p>
-          </div>
-        </div>
-
-        <div class="lesson-footer">
-          <p>不要只背中文翻譯，先判斷助詞原本的功能。</p>
-          <a class="button ghost" href="https://www.instagram.com/p/Db-sdrSkrdm/?img_index=1" target="_blank" rel="noopener noreferrer">查看 Instagram 原文 ↗</a>
-        </div>
-      </article>
+    <section class="section theater-section" id="theater">
+      <div class="section-heading reveal">
+        <p class="eyebrow">DAIDAI SHEEP THEATER</p>
+        <h2>呆呆羊深夜劇場</h2>
+        <p>影片以 YouTube 嵌入，不把大型影片放進網站，因此手機載入更輕，也能直接前往頻道觀看。</p>
+      </div>
+      <div class="video-grid" id="videoGrid"></div>
     </section>
 
     <section class="section" id="works">
