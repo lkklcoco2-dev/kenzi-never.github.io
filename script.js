@@ -119,6 +119,11 @@ async function loadPreviewData() {
       </article>
     `).join('');
 
+    archiveToggle.dataset.closedLabel = `展開全部 ${lessons.length} 篇`;
+    if (archiveToggle.getAttribute('aria-expanded') !== 'true') {
+      archiveToggle.textContent = archiveToggle.dataset.closedLabel;
+    }
+
     document.querySelector('#videoGrid').innerHTML = videos.map(item => `
       <article class="video-card reveal">
         <div class="video-frame">
@@ -144,7 +149,7 @@ archiveToggle.addEventListener('click', () => {
   const archive = document.querySelector('#lessonArchive');
   const open = archive.classList.toggle('open');
   archiveToggle.setAttribute('aria-expanded', String(open));
-  archiveToggle.textContent = open ? '收合教學歸檔' : '展開全部 10 篇';
+  archiveToggle.textContent = open ? '收合教學歸檔' : (archiveToggle.dataset.closedLabel || '展開全部教學');
 });
 
 loadPreviewData();
