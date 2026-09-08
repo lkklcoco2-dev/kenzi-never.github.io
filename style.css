@@ -14,7 +14,7 @@
   --radius:28px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{
   margin:0;
   color:var(--text);
@@ -176,6 +176,7 @@ h1 em{font-family:"Playfair Display",serif;font-style:normal;color:var(--sage);f
 .lesson-footer .button{white-space:nowrap}
 .theater-section{padding-top:110px}
 .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.video-toggle-row{display:flex;justify-content:center;margin-top:32px}
 .video-card{border:1px solid var(--line);border-radius:28px;overflow:hidden;background:linear-gradient(145deg,rgba(30,52,40,.82),rgba(10,24,16,.92));box-shadow:var(--shadow)}
 .video-frame{position:relative;aspect-ratio:16/9;background:#050b07}.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .video-copy{padding:22px}.video-copy h3{font-size:1.35rem;margin:8px 0}.video-copy p{color:var(--muted);font-size:.92rem;margin:0}
@@ -223,6 +224,7 @@ dialog::backdrop{background:rgba(2,8,5,.76);backdrop-filter:blur(7px)}
 @media(max-width:620px){
   .hero{padding-inline:0;gap:35px}.hero-panel{min-height:390px;padding:22px}.orbit-3{width:300px;height:300px}
   .course-grid,.work-grid,.latest-lesson-grid{grid-template-columns:1fr}.course-card{min-height:330px}
+  .course-card img{height:auto;aspect-ratio:3/2;object-fit:contain;object-position:center top;background:#102219}
   .intro-strip{font-size:.75rem;gap:12px;padding-inline:10px}
   .stats{grid-template-columns:1fr 1fr}.stats strong{font-size:2.5rem}
   .contact-actions{grid-template-columns:1fr}.primary-action{grid-column:auto}
