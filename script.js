@@ -90,6 +90,33 @@ const escapeHtml = value => String(value).replace(/[&<>'"]/g, char => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
 })[char]);
 
+const videoGrid = document.querySelector('#videoGrid');
+const videoToggle = document.querySelector('#videoToggle');
+const visibleVideoCount = 6;
+let allVideos = [];
+
+function renderVideos(expanded = false) {
+  const displayedVideos = expanded ? allVideos : allVideos.slice(0, visibleVideoCount);
+  videoGrid.innerHTML = displayedVideos.map(item => `
+    <article class="video-card reveal">
+      <div class="video-frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/${escapeHtml(item.youtubeId)}" title="${escapeHtml(item.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="video-copy">
+        <span class="video-meta">${escapeHtml(item.date)} · ${escapeHtml(item.type)}</span>
+        <h3>${escapeHtml(item.title)}</h3>
+        <p>${escapeHtml(item.description)}</p>
+      </div>
+    </article>
+  `).join('');
+
+  const remaining = Math.max(allVideos.length - visibleVideoCount, 0);
+  videoToggle.hidden = remaining === 0;
+  videoToggle.setAttribute('aria-expanded', String(expanded));
+  videoToggle.textContent = expanded ? '收合影片' : `展開其餘 ${remaining} 部影片`;
+  document.querySelectorAll('#videoGrid .reveal:not(.visible)').forEach(el => revealObserver.observe(el));
+}
+
 async function loadPreviewData() {
   try {
     const [lessonResponse, videoResponse] = await Promise.all([
@@ -124,23 +151,14 @@ async function loadPreviewData() {
       archiveToggle.textContent = archiveToggle.dataset.closedLabel;
     }
 
-    document.querySelector('#videoGrid').innerHTML = videos.map(item => `
-      <article class="video-card reveal">
-        <div class="video-frame">
-          <iframe src="https://www.youtube-nocookie.com/embed/${escapeHtml(item.youtubeId)}" title="${escapeHtml(item.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <div class="video-copy">
-          <span class="video-meta">${escapeHtml(item.date)} · ${escapeHtml(item.type)}</span>
-          <h3>${escapeHtml(item.title)}</h3>
-          <p>${escapeHtml(item.description)}</p>
-        </div>
-      </article>
-    `).join('');
+    allVideos = videos;
+    renderVideos(false);
 
     document.querySelectorAll('.reveal:not(.visible)').forEach(el => revealObserver.observe(el));
   } catch (error) {
     document.querySelector('#latestLessons').innerHTML = '<p class="data-fallback">教學資料暫時無法載入，請稍後重新整理。</p>';
-    document.querySelector('#videoGrid').innerHTML = '<p class="data-fallback">影片資料暫時無法載入，請稍後重新整理。</p>';
+    videoGrid.innerHTML = '<p class="data-fallback">影片資料暫時無法載入，請稍後重新整理。</p>';
+    videoToggle.hidden = true;
   }
 }
 
@@ -150,6 +168,11 @@ archiveToggle.addEventListener('click', () => {
   const open = archive.classList.toggle('open');
   archiveToggle.setAttribute('aria-expanded', String(open));
   archiveToggle.textContent = open ? '收合教學歸檔' : (archiveToggle.dataset.closedLabel || '展開全部教學');
+});
+
+videoToggle.addEventListener('click', () => {
+  const expanded = videoToggle.getAttribute('aria-expanded') !== 'true';
+  renderVideos(expanded);
 });
 
 loadPreviewData();
