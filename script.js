@@ -103,9 +103,10 @@ function renderVideos(expanded = false) {
         <iframe src="https://www.youtube-nocookie.com/embed/${escapeHtml(item.youtubeId)}" title="${escapeHtml(item.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <div class="video-copy">
-        <span class="video-meta">${escapeHtml(item.date)} · ${escapeHtml(item.type)}</span>
+        <span class="video-meta">${item.date ? escapeHtml(item.date) + " · " : ""}${escapeHtml(item.type)}</span>
         <h3>${escapeHtml(item.title)}</h3>
         <p>${escapeHtml(item.description)}</p>
+        <a class="text-link" href="${escapeHtml(item.source || "https://www.youtube.com/watch?v=" + item.youtubeId)}" target="_blank" rel="noopener noreferrer">在 YouTube 觀看 ↗</a>
       </div>
     </article>
   `).join('');
