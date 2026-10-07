@@ -100,13 +100,13 @@ function renderVideos(expanded = false) {
   videoGrid.innerHTML = displayedVideos.map(item => `
     <article class="video-card reveal">
       <div class="video-frame">
-        <iframe src="https://www.youtube-nocookie.com/embed/${escapeHtml(item.youtubeId)}" title="${escapeHtml(item.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        ${item.platform === "instagram" ? `<a class="button ghost" style="display:flex;align-items:center;justify-content:center;height:100%;width:100%" href="${escapeHtml(item.source)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(item.title)}：在 Instagram 觀看">在 Instagram 觀看 ↗</a>` : `<iframe src="https://www.youtube-nocookie.com/embed/${escapeHtml(item.youtubeId)}" title="${escapeHtml(item.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`}
       </div>
       <div class="video-copy">
         <span class="video-meta">${item.date ? escapeHtml(item.date) + " · " : ""}${escapeHtml(item.type)}</span>
         <h3>${escapeHtml(item.title)}</h3>
         <p>${escapeHtml(item.description)}</p>
-        <a class="text-link" href="${escapeHtml(item.source || "https://www.youtube.com/watch?v=" + item.youtubeId)}" target="_blank" rel="noopener noreferrer">在 YouTube 觀看 ↗</a>
+        <a class="text-link" href="${escapeHtml(item.source || "https://www.youtube.com/watch?v=" + item.youtubeId)}" target="_blank" rel="noopener noreferrer">在 ${item.platform === "instagram" ? "Instagram" : "YouTube"} 觀看 ↗</a>
       </div>
     </article>
   `).join('');
@@ -121,8 +121,8 @@ function renderVideos(expanded = false) {
 async function loadPreviewData() {
   try {
     const [lessonResponse, videoResponse] = await Promise.all([
-      fetch('data/lessons.json?v=20261005'),
-      fetch('data/daidai-videos.json?v=20261005')
+      fetch('data/lessons.json?v=20261008'),
+      fetch('data/daidai-videos.json?v=20261008')
     ]);
     if (!lessonResponse.ok || !videoResponse.ok) throw new Error('資料載入失敗');
     const lessons = await lessonResponse.json();
