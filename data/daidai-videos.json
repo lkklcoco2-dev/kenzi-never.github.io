@@ -1,5 +1,154 @@
 [
   {
+    "date": "2026.10.19",
+    "dateIso": "2026-10-19",
+    "title": "呆呆羊深夜食堂 - 巧克力蛋糕捲",
+    "type": "深夜食堂・Instagram Reel",
+    "description": "呆呆羊與夥伴們的「巧克力蛋糕捲」料理小故事，前往 Instagram 欣賞完整影片。",
+    "source": "https://www.instagram.com/kenzi_never/reel/DepGqrTBcMz/",
+    "platform": "instagram",
+    "observedAt": "2026-10-20"
+  },
+  {
+    "date": "2026.10.17",
+    "dateIso": "2026-10-17",
+    "title": "呆呆羊深夜食堂 - 花生芋圓湯",
+    "type": "深夜食堂・Instagram Reel",
+    "description": "呆呆羊與夥伴們的「花生芋圓湯」料理小故事，前往 Instagram 欣賞完整影片。",
+    "source": "https://www.instagram.com/kenzi_never/reel/DemaGCMP6bF/",
+    "platform": "instagram",
+    "observedAt": "2026-10-20"
+  },
+  {
+    "date": "2026.10.16",
+    "dateIso": "2026-10-16",
+    "title": "呆呆羊深夜食堂 - 日式漢堡排",
+    "type": "深夜食堂・Instagram Reel",
+    "description": "呆呆羊與夥伴們的「日式漢堡排」料理小故事，前往 Instagram 欣賞完整影片。",
+    "source": "https://www.instagram.com/kenzi_never/reel/DejxVRNhQAe/",
+    "platform": "instagram",
+    "observedAt": "2026-10-20"
+  },
+  {
+    "date": "2026.10.15",
+    "dateIso": "2026-10-15",
+    "title": "呆呆羊深夜食堂 - 日式奶油燉菜",
+    "type": "深夜食堂・Instagram Reel",
+    "description": "呆呆羊與夥伴們的「日式奶油燉菜」料理小故事，前往 Instagram 欣賞完整影片。",
+    "source": "https://www.instagram.com/kenzi_never/reel/DehMtWdNw-X/",
+    "platform": "instagram",
+    "observedAt": "2026-10-20"
+  },
+  {
+    "date": "2026.10.14",
+    "dateIso": "2026-10-14",
+    "title": "呆呆羊深夜食堂 - 壽喜燒",
+    "type": "深夜食堂・Instagram Reel",
+    "description": "呆呆羊與夥伴們的「壽喜燒」料理小故事，前往 Instagram 欣賞完整影片。",
+    "source": "https://www.instagram.com/kenzi_never/reel/Deeka7PvsWk/",
+    "platform": "instagram",
+    "observedAt": "2026-10-20"
+  },
+  {
+    "date": "",
+    "title": "呆呆羊深夜食堂 - 奶油味噌燒烏龍＋炙燒明太子馬鈴薯",
+    "type": "深夜食堂・YouTube Shorts",
+    "description": "和呆呆羊一起欣賞「奶油味噌燒烏龍＋炙燒明太子馬鈴薯」料理短片。",
+    "youtubeId": "z3x5QgPM5Yo",
+    "source": "https://www.youtube.com/shorts/z3x5QgPM5Yo",
+    "dateStatus": "unverified",
+    "observedAt": "2026-10-20",
+    "thumbnail": "https://i.ytimg.com/vi/z3x5QgPM5Yo/hqdefault.jpg"
+  },
+  {
+    "date": "",
+    "title": "呆呆羊深夜食堂 - 黑森林蛋糕",
+    "type": "深夜食堂・YouTube Shorts",
+    "description": "和呆呆羊一起欣賞「黑森林蛋糕」料理短片。",
+    "youtubeId": "cb4zO_JUDhg",
+    "source": "https://www.youtube.com/shorts/cb4zO_JUDhg",
+    "dateStatus": "unverified",
+    "observedAt": "2026-10-20",
+    "thumbnail": "https://i.ytimg.com/vi/cb4zO_JUDhg/hqdefault.jpg"
+  },
+  {
+    "date": "",
+    "title": "呆呆羊深夜食堂 - 嫩煎香雞排",
+    "type": "深夜食堂・YouTube Shorts",
+    "description": "和呆呆羊一起欣賞「嫩煎香雞排」料理短片。",
+    "youtubeId": "V1xiesGrY_0",
+    "source": "https://www.youtube.com/shorts/V1xiesGrY_0",
+    "dateStatus": "unverified",
+    "observedAt": "2026-10-20",
+    "thumbnail": "https://i.ytimg.com/vi/V1xiesGrY_0/hqdefault.jpg"
+  },
+  {
+    "date": "",
+    "title": "呆呆羊深夜食堂 - 焦糖海鹽生乳捲 × 手工布丁",
+    "type": "深夜食堂・YouTube Shorts",
+    "description": "和呆呆羊一起欣賞「焦糖海鹽生乳捲 × 手工布丁」料理短片。",
+    "youtubeId": "rcGgs051QLw",
+    "source": "https://www.youtube.com/shorts/rcGgs051QLw",
+    "dateStatus": "unverified",
+    "observedAt": "2026-10-20",
+    "thumbnail": "https://i.ytimg.com/vi/rcGgs051QLw/hqdefault.jpg"
+  },
+  {
+    "date": "",
+    "title": "呆呆羊深夜食堂 - 醬燒烤糰子與蜜汁手羽先",
+    "type": "深夜食堂・YouTube Shorts",
+    "description": "和呆呆羊一起欣賞「醬燒烤糰子與蜜汁手羽先」料理短片。",
+    "youtubeId": "04-mAmzTflg",
+    "source": "https://www.youtube.com/shorts/04-mAmzTflg",
+    "dateStatus": "unverified",
+    "observedAt": "2026-10-20",
+    "thumbnail": "https://i.ytimg.com/vi/04-mAmzTflg/hqdefault.jpg"
+  },
+  {
+    "date": "",
+    "title": "呆呆羊深夜食堂 - 日式和甜點信玄餅",
+    "type": "深夜食堂・YouTube Shorts",
+    "description": "和呆呆羊一起欣賞「日式和甜點信玄餅」料理短片。",
+    "youtubeId": "hT8X0B97usQ",
+    "source": "https://www.youtube.com/shorts/hT8X0B97usQ",
+    "dateStatus": "unverified",
+    "observedAt": "2026-10-20",
+    "thumbnail": "https://i.ytimg.com/vi/hT8X0B97usQ/hqdefault.jpg"
+  },
+  {
+    "date": "",
+    "title": "呆呆羊深夜食堂 - 烤飯糰茶泡飯",
+    "type": "深夜食堂・YouTube Shorts",
+    "description": "和呆呆羊一起欣賞「烤飯糰茶泡飯」料理短片。",
+    "youtubeId": "qiwD__G0JLI",
+    "source": "https://www.youtube.com/shorts/qiwD__G0JLI",
+    "dateStatus": "unverified",
+    "observedAt": "2026-10-20",
+    "thumbnail": "https://i.ytimg.com/vi/qiwD__G0JLI/hqdefault.jpg"
+  },
+  {
+    "date": "",
+    "title": "呆呆羊深夜食堂 - 照燒溫泉雞肉飯",
+    "type": "深夜食堂・YouTube Shorts",
+    "description": "和呆呆羊一起欣賞「照燒溫泉雞肉飯」料理短片。",
+    "youtubeId": "hqTzJSpAy7o",
+    "source": "https://www.youtube.com/shorts/hqTzJSpAy7o",
+    "dateStatus": "unverified",
+    "observedAt": "2026-10-20",
+    "thumbnail": "https://i.ytimg.com/vi/hqTzJSpAy7o/hqdefault.jpg"
+  },
+  {
+    "date": "",
+    "title": "呆呆羊深夜食堂 - 鮭魚山味悶飯",
+    "type": "深夜食堂・YouTube Shorts",
+    "description": "和呆呆羊一起欣賞「鮭魚山味悶飯」料理短片。",
+    "youtubeId": "3YKIM0KSQQE",
+    "source": "https://www.youtube.com/shorts/3YKIM0KSQQE",
+    "dateStatus": "unverified",
+    "observedAt": "2026-10-20",
+    "thumbnail": "https://i.ytimg.com/vi/3YKIM0KSQQE/hqdefault.jpg"
+  },
+  {
     "date": "",
     "title": "呆呆羊深夜食堂 - 日式和果子 高雄",
     "type": "深夜食堂・YouTube Shorts",
