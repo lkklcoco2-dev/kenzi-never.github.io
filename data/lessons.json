@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026.10.25",
+    "dateIso": "2026-10-25",
+    "title": "N4 聽力｜ご兄弟はいらっしゃいますか",
+    "category": "聽力・問答判斷",
+    "summary": "從兄弟姊妹的問答，練習聽懂問題與回答的關係，並思考不合適的回應如何修改。",
+    "source": "https://www.instagram.com/kenzi_never/p/De6o8LTDj8B/",
+    "level": "N4",
+    "featured": true
+  },
+  {
+    "date": "2026.10.23",
+    "dateIso": "2026-10-23",
+    "title": "商用日文｜颱風來了，日本客戶的訂單怎麼辦？",
+    "category": "商用日文・訂單與交期",
+    "summary": "整理確認出貨、告知可能延誤、確認交期與後續聯絡的表達，分清預定出貨日與預定交貨日。",
+    "source": "https://www.instagram.com/kenzi_never/p/De1hmEeEtGD/",
+    "level": "商用日文",
+    "featured": true
+  },
+  {
+    "date": "2026.10.22",
+    "dateIso": "2026-10-22",
+    "title": "たら・なら・ば｜都是「如果」，差在哪裡？",
+    "category": "文法比較・條件表達",
+    "summary": "從時間先後、資訊或計畫的前提，以及條件與結果的關係理解三種典型用法，並留意可互換的情境。",
+    "source": "https://www.instagram.com/kenzi_never/p/Dey7x48knnQ/",
+    "level": "文法比較",
+    "featured": true
+  },
+  {
+    "date": "2026.10.21",
+    "dateIso": "2026-10-21",
+    "title": "ように・ために｜同樣是「為了」，怎麼判斷？",
+    "category": "文法比較・目的表達",
+    "summary": "比較読めるように與読むために，從能力狀態與行動目標理解例句的焦點，不只依中文翻譯判斷。",
+    "source": "https://www.instagram.com/kenzi_never/p/DewXUlBkrys/",
+    "level": "文法比較",
+    "featured": false
+  },
+  {
     "date": "2026.10.19",
     "dateIso": "2026-10-19",
     "title": "公園を歩く／公園で歩く：場所助詞怎麼選？",
@@ -7,7 +47,7 @@
     "level": "N5～N4",
     "summary": "比較場所＋を與場所＋で的表達重點：を可標示移動經過的空間、路線或離開的起點，で標示動作發生的場所。從公園、橋與家的例句，依動詞和場所的關係判斷助詞。",
     "source": "https://www.instagram.com/kenzi_never/p/DerGcjuEqDl/",
-    "featured": true,
+    "featured": false,
     "keywords": [
       "を",
       "で",
@@ -58,7 +98,7 @@
     "level": "N5～N4",
     "summary": "從學校裡學日文、學校有圖書館，以及學校也有圖書館的例句，拆解で＋は、に＋は與に＋も。先辨識動作場所或存在位置，再理解主題、對比與追加的語意。",
     "source": "https://www.instagram.com/kenzi_never/p/DemIIF9ksZC/",
-    "featured": true,
+    "featured": false,
     "keywords": [
       "では",
       "には",
@@ -90,7 +130,7 @@
     "level": "N3～N2",
     "summary": "整理向日本廠商詢問報價、最低訂購數量、交期與出貨日期的五句實用表達。特別分辨納期是約定的交貨期限，発送日是寄出日期，避免把出貨當成當天到貨。",
     "source": "https://www.instagram.com/kenzi_never/p/Dejczq8kv1I/",
-    "featured": true,
+    "featured": false,
     "keywords": [
       "見積もり",
       "最低発注数量",
@@ -142,7 +182,7 @@
     "level": "N3～N2",
     "summary": "比較「少々お待ちください」與「少々お待ちいただけますか」的語氣：前者是清楚有禮的請求，後者較委婉地詢問對方能否等待。依職場情境選擇，不把ください一律視為不禮貌。",
     "source": "https://www.instagram.com/kenzi_never/p/DeRg34Fkiv-/",
-    "featured": true,
+    "featured": false,
     "keywords": [
       "少々お待ちください",
       "少々お待ちいただけますか"
@@ -157,7 +197,7 @@
     "level": "N3",
     "summary": "從公司倒閉的例句比較ようです與らしい：先確認資訊來源，再判斷說話者如何推測。によると用來標示來源；避免把ようです限定為親眼所見，或把らしい限定為聽說。",
     "source": "https://www.instagram.com/kenzi_never/p/DePFC5dkmIs/",
-    "featured": true,
+    "featured": false,
     "keywords": [
       "によると",
       "ようです",
@@ -173,7 +213,7 @@
     "level": "N4～N3",
     "summary": "比較～たら著重事情發生後的情境，與～ば著重條件成立的表達。透過下雨、工作結束與返家例句，理解可互換情況及請求句的限制，不以過去、未來硬分。",
     "source": "https://www.instagram.com/kenzi_never/p/DeMYVlhEluc/",
-    "featured": true,
+    "featured": false,
     "keywords": [
       "～たら",
       "～ば"
@@ -188,7 +228,7 @@
     "level": "N4",
     "summary": "のに可表達預期與結果的落差，也可出現在用途、便利性或所需時間的句子。從便利、必要與花時間等搭配，判斷前後關係，避免見到のに就套用逆接翻譯。",
     "source": "https://www.instagram.com/kenzi_never/p/DeJwDtQkhbR/",
-    "featured": true,
+    "featured": false,
     "keywords": [
       "のに",
       "便利",
@@ -205,7 +245,7 @@
     "level": "N4",
     "summary": "以「連看到蟲都討厭」的題目，拆解見る＋の＋も的名詞化與強調用法，對照のに的逆接及用途表達。先判斷前後的語意關係，再選擇自然且合適的助詞。",
     "source": "https://www.instagram.com/kenzi_never/p/DeHSlQyEgNa/",
-    "featured": true,
+    "featured": false,
     "keywords": [
       "のも",
       "のに",
@@ -221,7 +261,7 @@
     "level": "N2～N1",
     "summary": "從「社内で検討いたしましたが」到「今回は見送らせていただければと存じます」，辨識客氣鋪陳、轉折與真正結論，避免把婉拒誤解成仍在考慮。",
     "source": "https://www.instagram.com/kenzi_never/p/Dd_fg3mE8A-/",
-    "featured": true,
+    "featured": false,
     "keywords": [
       "見送る",
       "いたしかねます",
@@ -237,7 +277,7 @@
     "level": "N5～N4",
     "summary": "喜歡名詞時用「Nが好き」，喜歡做某件事時，用「動詞辭書形＋のが好き」把動作名詞化。透過料理、看電影與學日文的例句，理解の的作用。",
     "source": "https://www.instagram.com/kenzi_never/p/Dd9BEhpkpoh/",
-    "featured": true,
+    "featured": false,
     "keywords": [
       "が好き",
       "のが好き"
@@ -252,7 +292,7 @@
     "level": "N5～N4",
     "summary": "どうやって可詢問做法與方法，何で可詢問工具或交通方式；なんで也可能表示「為什麼」。判斷時要結合上下文，避免只按中文意思套用。",
     "source": "https://www.instagram.com/kenzi_never/p/Dd6ZyUvkh13/",
-    "featured": true,
+    "featured": false,
     "keywords": [
       "どうやって",
       "何で"
@@ -292,7 +332,7 @@
     "level": "N4～N3",
     "summary": "先に帰ります是單純說明自己先回去；お先に失礼します則是職場離開時，向仍在工作的同事表達禮貌的告辭語。",
     "source": "https://www.instagram.com/kenzi_never/p/DdeLZfXEgmy/",
-    "featured": true
+    "featured": false
   },
   {
     "date": "2026.09.18",
@@ -302,7 +342,7 @@
     "level": "N3～N2",
     "summary": "四句都能表示了解，但須依同事、上司、客戶或服務情境選擇；商用日文的重點不是一味提高敬語，而是掌握關係與距離。",
     "source": "https://www.instagram.com/kenzi_never/p/DdbYGngktWi/",
-    "featured": true
+    "featured": false
   },
   {
     "date": "2026.09.17",
@@ -312,7 +352,7 @@
     "level": "N3～N2",
     "summary": "Vない表示單純否定，Vずに表達不做前項而進行後項，V辞書形＋まい則用於決定不做或推測不會發生。",
     "source": "https://www.instagram.com/kenzi_never/p/DdY-s9Hkpa0/",
-    "featured": true
+    "featured": false
   },
   {
     "date": "2026.09.16",
@@ -342,7 +382,7 @@
     "level": "各程度適用",
     "summary": "單字、文法與題目都會，不代表面對真實對話時能自然開口；還需要理解使用情境、說話對象與語感差異。",
     "source": "https://www.instagram.com/p/DdOd0ymkj7h/",
-    "featured": true
+    "featured": false
   },
   {
     "date": "2026.09.08",
@@ -352,7 +392,7 @@
     "level": "N4",
     "summary": "從計程車考題理解～んですが在請求情境中的緩和語氣，以及日檢如何同時考文法、情境與語感。",
     "source": "https://www.threads.com/@kenzi_never/post/Dc_gsnkkxui",
-    "featured": true
+    "featured": false
   },
   {
     "date": "2026.09.06",
@@ -362,7 +402,7 @@
     "level": "N4～N2",
     "summary": "從翻譯、使役與商務表達回顧本週內容，說明文法正確不代表實際情境中自然合適。",
     "source": "https://www.threads.com/@kenzi_never/post/Dc8aTpJk1wF",
-    "featured": true
+    "featured": false
   },
   {
     "date": "2026.09.04",

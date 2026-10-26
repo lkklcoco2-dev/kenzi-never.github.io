@@ -121,8 +121,8 @@ function renderVideos(expanded = false) {
 async function loadPreviewData() {
   try {
     const [lessonResponse, videoResponse] = await Promise.all([
-      fetch('data/lessons.json?v=20261020'),
-      fetch('data/daidai-videos.json?v=20261020')
+      fetch('data/lessons.json?v=20261026'),
+      fetch('data/daidai-videos.json?v=20261026')
     ]);
     if (!lessonResponse.ok || !videoResponse.ok) throw new Error('資料載入失敗');
     const lessons = await lessonResponse.json();
@@ -152,7 +152,16 @@ async function loadPreviewData() {
       archiveToggle.textContent = archiveToggle.dataset.closedLabel;
     }
 
-    allVideos = videos;
+    // Keep the calendar promotion first during October–November 2026 (Taipei).
+    const promotionDate = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Asia/Taipei', year: 'numeric', month: '2-digit', day: '2-digit'
+    }).format(new Date());
+    const promotionActive = promotionDate >= '2026-10-01' && promotionDate < '2026-12-01';
+    const calendarVideoId = 'vfZAlaoPvt0';
+    allVideos = promotionActive
+      ? [...videos.filter(item => item.youtubeId === calendarVideoId),
+         ...videos.filter(item => item.youtubeId !== calendarVideoId)]
+      : videos;
     renderVideos(false);
 
     document.querySelectorAll('.reveal:not(.visible)').forEach(el => revealObserver.observe(el));
