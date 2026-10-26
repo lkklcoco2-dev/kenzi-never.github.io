@@ -96,7 +96,13 @@ const visibleVideoCount = 6;
 let allVideos = [];
 
 function renderVideos(expanded = false) {
-  const displayedVideos = expanded ? allVideos : allVideos.slice(0, visibleVideoCount);
+  // Preview different series without hiding the rest of the collection.
+  const preferredIds = ['JhoSHmPRqRs', 'YcUUhb4CxyY', '-V5piJzzPyI', 'NIuBUl-v_4k', 'pCVtC6co9vA'];
+  const promoted = allVideos[0]?.youtubeId === 'vfZAlaoPvt0' ? [allVideos[0]] : [];
+  const selection = [...promoted, ...preferredIds.map(id => allVideos.find(item => item.youtubeId === id)).filter(Boolean)];
+  const selectedIds = new Set(selection.map(item => item.youtubeId));
+  const previewVideos = [...selection, ...allVideos.filter(item => !selectedIds.has(item.youtubeId))].slice(0, visibleVideoCount);
+  const displayedVideos = expanded ? allVideos : previewVideos;
   videoGrid.innerHTML = displayedVideos.map(item => `
     <article class="video-card reveal">
       <div class="video-frame">
@@ -114,7 +120,7 @@ function renderVideos(expanded = false) {
   const remaining = Math.max(allVideos.length - visibleVideoCount, 0);
   videoToggle.hidden = remaining === 0;
   videoToggle.setAttribute('aria-expanded', String(expanded));
-  videoToggle.textContent = expanded ? '收合影片' : `展開其餘 ${remaining} 部影片`;
+  videoToggle.textContent = expanded ? '收合影片' : `查看全部系列・其餘 ${remaining} 部影片`;
   document.querySelectorAll('#videoGrid .reveal:not(.visible)').forEach(el => revealObserver.observe(el));
 }
 
