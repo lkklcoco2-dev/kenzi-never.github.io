@@ -97,7 +97,7 @@ let allVideos = [];
 
 function renderVideos(expanded = false) {
   // Preview different series without hiding the rest of the collection.
-  const preferredIds = ['vBgrB8kxn8g', 'JhoSHmPRqRs', 'YcUUhb4CxyY', '-V5piJzzPyI', 'NIuBUl-v_4k', 'pCVtC6co9vA'];
+  const preferredIds = ['vBgrB8kxn8g', 'TgB4eTcQhNo', 'YcUUhb4CxyY', '-V5piJzzPyI', 'NIuBUl-v_4k', 'y4xyk5LRAxw', 'RhRt73_hnZk', 'JhoSHmPRqRs'];
   const promoted = allVideos[0]?.youtubeId === 'vfZAlaoPvt0' ? [allVideos[0]] : [];
   const selection = [...promoted, ...preferredIds.map(id => allVideos.find(item => item.youtubeId === id)).filter(Boolean)];
   const selectedIds = new Set(selection.map(item => item.youtubeId));
@@ -128,7 +128,7 @@ async function loadPreviewData() {
   try {
     const [lessonResponse, videoResponse] = await Promise.all([
       fetch('data/lessons.json?v=20261026'),
-      fetch('data/daidai-videos.json?v=20261026c')
+      fetch('data/daidai-videos.json?v=20261030')
     ]);
     if (!lessonResponse.ok || !videoResponse.ok) throw new Error('資料載入失敗');
     const lessons = await lessonResponse.json();
