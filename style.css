@@ -104,6 +104,13 @@ h1 em{font-family:"Playfair Display",serif;font-style:normal;color:var(--sage);f
 .section-heading h2,.feature-copy h2,.about-copy h2,.contact-copy h2{font-size:clamp(2.1rem,4vw,4rem);line-height:1.17;letter-spacing:-.04em;margin-bottom:18px}
 .section-heading>p:last-child,.feature-copy>p,.about-copy>p,.contact-copy>p{color:var(--muted)}
 .course-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.calendar-section{scroll-margin-top:110px;display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4vw,52px);align-items:center;border:1px solid var(--line);border-radius:36px;padding:clamp(24px,4vw,48px);background:linear-gradient(135deg,rgba(212,178,118,.12),rgba(12,29,20,.9))}
+.calendar-visual{margin:0;min-width:0}.calendar-visual img{display:block;width:100%;height:auto;border-radius:24px}.calendar-visual figcaption{margin-top:12px;color:var(--muted);font-size:.78rem;line-height:1.7}
+.calendar-copy{min-width:0}.calendar-copy h2{font-size:clamp(2.2rem,4vw,4rem);line-height:1.15;letter-spacing:-.04em;margin:20px 0}.calendar-copy>p{color:var(--muted)}
+.calendar-plans{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}.calendar-plans>div{padding:20px 16px;border:1px solid var(--line);border-radius:20px;background:rgba(5,16,10,.28)}.calendar-plans dt{font-size:.85rem;color:var(--muted)}.calendar-plans dd{margin:8px 0 0;font-size:clamp(1.4rem,2.5vw,2rem);font-weight:800;color:var(--cream);white-space:nowrap}.calendar-plans dd span{font-size:.8rem;color:var(--gold);font-weight:600}
+.calendar-details{font-size:.9rem}.calendar-copy .calendar-note{font-size:.85rem;line-height:1.8;margin-top:20px}.hero-actions .text-link{align-self:center}
+@media(max-width:900px){.calendar-section{grid-template-columns:1fr}}
+@media(max-width:380px){.calendar-plans{grid-template-columns:1fr}}
 .recruitment-section{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch}
 .recruitment-copy,.recruitment-facts{border:1px solid var(--line);border-radius:36px;padding:clamp(28px,5vw,54px);background:linear-gradient(145deg,rgba(35,63,47,.9),rgba(12,29,20,.92));box-shadow:var(--shadow)}
 .recruitment-copy h2{font-size:clamp(2.25rem,4.5vw,4.5rem);line-height:1.12;letter-spacing:-.045em;margin:18px 0}
