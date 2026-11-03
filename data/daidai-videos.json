@@ -1,5 +1,35 @@
 [
   {
+    "youtubeId": "EdnukwNIxts",
+    "title": "呆呆羊深夜食堂 - 奶油味噌拉麵",
+    "type": "深夜食堂・YouTube Shorts",
+    "source": "https://www.youtube.com/shorts/EdnukwNIxts",
+    "description": "在 YouTube 欣賞「奶油味噌拉麵」完整短片。",
+    "observedAt": "2026-11-04",
+    "date": "2026.11.03",
+    "dateIso": "2026-11-03"
+  },
+  {
+    "youtubeId": "lZICy2MnsWQ",
+    "title": "呆呆羊深夜食堂 - 鮭魚蔬菜湯",
+    "type": "深夜食堂・YouTube Shorts",
+    "source": "https://www.youtube.com/shorts/lZICy2MnsWQ",
+    "description": "在 YouTube 欣賞「鮭魚蔬菜湯」完整短片。",
+    "observedAt": "2026-11-04",
+    "date": "2026.11.02",
+    "dateIso": "2026-11-02"
+  },
+  {
+    "youtubeId": "PkYSPnbKlyA",
+    "title": "呆呆羊深夜食堂 - 深夜關東煮",
+    "type": "深夜食堂・YouTube Shorts",
+    "source": "https://www.youtube.com/shorts/PkYSPnbKlyA",
+    "description": "在 YouTube 欣賞「深夜關東煮」完整短片。",
+    "observedAt": "2026-11-04",
+    "date": "2026.10.30",
+    "dateIso": "2026-10-30"
+  },
+  {
     "youtubeId": "TgB4eTcQhNo",
     "title": "呆呆深夜食堂 - 日式炸雞",
     "type": "深夜食堂・YouTube Shorts",
