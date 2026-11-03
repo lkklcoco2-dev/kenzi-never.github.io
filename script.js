@@ -127,7 +127,7 @@ function renderVideos(expanded = false) {
 async function loadPreviewData() {
   try {
     const [lessonResponse, videoResponse] = await Promise.all([
-      fetch('data/lessons.json?v=20261104'),
+      fetch('data/lessons.json?v=20261104c'),
       fetch('data/daidai-videos.json?v=20261104')
     ]);
     if (!lessonResponse.ok || !videoResponse.ok) throw new Error('資料載入失敗');

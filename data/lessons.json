@@ -1,22 +1,5 @@
 [
   {
-    "date": "2026.11.03",
-    "dateIso": "2026-11-03",
-    "title": "N2 新聞日文｜單字都認識，為什麼還是翻不出來？",
-    "category": "N2 翻譯訓練・新聞長句",
-    "summary": "以 AI 新聞長句練習辨識主題、述語與修飾關係，理解～における、～を巡る與一段と鮮明にする，再重組中文語序，將逐字翻譯轉成自然表達。",
-    "source": "https://www.instagram.com/p/DfR1QTAiYQ4/",
-    "level": "N2 以上",
-    "featured": true,
-    "keywords": [
-      "新聞翻譯",
-      "長句分析",
-      "～における",
-      "～を巡る",
-      "一段と鮮明にする"
-    ]
-  },
-  {
     "date": "2026.10.25",
     "dateIso": "2026-10-25",
     "title": "N4 聽力｜ご兄弟はいらっしゃいますか",
@@ -44,7 +27,7 @@
     "summary": "從時間先後、資訊或計畫的前提，以及條件與結果的關係理解三種典型用法，並留意可互換的情境。",
     "source": "https://www.instagram.com/kenzi_never/p/Dey7x48knnQ/",
     "level": "文法比較",
-    "featured": false
+    "featured": true
   },
   {
     "date": "2026.10.21",
