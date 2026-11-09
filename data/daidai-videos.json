@@ -1,5 +1,66 @@
 [
   {
+    "youtubeId": "z6hsGozsl34",
+    "title": "呆呆羊深夜食堂 - 巧克力鏡面",
+    "type": "深夜食堂・YouTube Shorts",
+    "source": "https://www.youtube.com/shorts/z6hsGozsl34",
+    "description": "跟著呆呆羊欣賞甜點上光亮的巧克力鏡面。",
+    "observedAt": "2026-11-09",
+    "date": "2026.11.08",
+    "dateIso": "2026-11-08"
+  },
+  {
+    "youtubeId": "AG3pSFWNrj8",
+    "title": "あなたへの歌 - 呆呆羊版",
+    "type": "呆呆羊音樂 MV・YouTube",
+    "source": "https://www.youtube.com/watch?v=AG3pSFWNrj8",
+    "description": "將離別後的思念與感謝寫進歌裡，陪呆呆羊把心意慢慢說完。",
+    "observedAt": "2026-11-09",
+    "date": "2026.11.07",
+    "dateIso": "2026-11-07",
+    "instagramLyrics": "https://www.instagram.com/reel/DfcSSJGAdR_/"
+  },
+  {
+    "youtubeId": "hJxBRk1gtrU",
+    "title": "あなたへの歌｜預告短片",
+    "type": "呆呆羊音樂 MV・YouTube Shorts",
+    "source": "https://www.youtube.com/shorts/hJxBRk1gtrU",
+    "description": "從一封信走進《あなたへの歌》的故事，觀看呆呆羊版 MV 的直式預告。",
+    "observedAt": "2026-11-09",
+    "date": "2026.11.07",
+    "dateIso": "2026-11-07"
+  },
+  {
+    "youtubeId": "KMoccZB62wU",
+    "title": "呆呆羊深夜食堂 - 韓式銅板烤肉",
+    "type": "深夜食堂・YouTube Shorts",
+    "source": "https://www.youtube.com/shorts/KMoccZB62wU",
+    "description": "今晚跟著呆呆羊吃一頓韓式銅板烤肉。",
+    "observedAt": "2026-11-09",
+    "date": "2026.11.06",
+    "dateIso": "2026-11-06"
+  },
+  {
+    "youtubeId": "36iHXYyEueA",
+    "title": "呆呆羊深夜食堂 - 和牛牛丼",
+    "type": "深夜食堂・YouTube Shorts",
+    "source": "https://www.youtube.com/shorts/36iHXYyEueA",
+    "description": "跟著呆呆羊看看今晚的和牛牛丼。",
+    "observedAt": "2026-11-09",
+    "date": "2026.11.05",
+    "dateIso": "2026-11-05"
+  },
+  {
+    "youtubeId": "tlTJGAlM-HY",
+    "title": "呆呆羊深夜食堂 - 鮭魚山珍悶飯",
+    "type": "深夜食堂・YouTube Shorts",
+    "source": "https://www.youtube.com/shorts/tlTJGAlM-HY",
+    "description": "跟著呆呆羊看看今晚的鮭魚山珍悶飯。",
+    "observedAt": "2026-11-09",
+    "date": "2026.11.04",
+    "dateIso": "2026-11-04"
+  },
+  {
     "youtubeId": "EdnukwNIxts",
     "title": "呆呆羊深夜食堂 - 奶油味噌拉麵",
     "type": "深夜食堂・YouTube Shorts",
@@ -30,6 +91,16 @@
     "dateIso": "2026-10-30"
   },
   {
+    "youtubeId": "qhwu04kUhhU",
+    "title": "2026萬聖節part2",
+    "type": "呆呆羊萬聖節特別篇・YouTube",
+    "source": "https://www.youtube.com/watch?v=qhwu04kUhhU",
+    "description": "接續呆呆羊的萬聖節故事，觀看第二集。",
+    "observedAt": "2026-11-09",
+    "date": "2026.10.31",
+    "dateIso": "2026-10-31"
+  },
+  {
     "youtubeId": "TgB4eTcQhNo",
     "title": "呆呆深夜食堂 - 日式炸雞",
     "type": "深夜食堂・YouTube Shorts",
@@ -55,6 +126,16 @@
     "description": "在 YouTube 欣賞「呆呆羊深夜食堂 - 親子丼」完整短片。",
     "dateStatus": "unverified",
     "observedAt": "2026-10-30"
+  },
+  {
+    "youtubeId": "dUVGkEVwy8g",
+    "title": "2026萬聖節，食物怪盜，呆呆羊參上",
+    "type": "呆呆羊萬聖節特別篇・YouTube",
+    "source": "https://www.youtube.com/watch?v=dUVGkEVwy8g",
+    "description": "食物接連消失，跟著呆呆羊找出神祕黑影的身分。",
+    "observedAt": "2026-11-09",
+    "date": "2026.10.26",
+    "dateIso": "2026-10-26"
   },
   {
     "title": "颱風天騎車去",

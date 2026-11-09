@@ -97,7 +97,7 @@ let allVideos = [];
 
 function renderVideos(expanded = false) {
   // Preview different series without hiding the rest of the collection.
-  const preferredIds = ['vBgrB8kxn8g', 'EdnukwNIxts', 'lZICy2MnsWQ', 'PkYSPnbKlyA', 'TgB4eTcQhNo', 'YcUUhb4CxyY', '-V5piJzzPyI', 'NIuBUl-v_4k', 'y4xyk5LRAxw', 'RhRt73_hnZk', 'JhoSHmPRqRs'];
+  const preferredIds = ['vBgrB8kxn8g', 'z6hsGozsl34', 'AG3pSFWNrj8', 'hJxBRk1gtrU', 'KMoccZB62wU', '36iHXYyEueA', 'tlTJGAlM-HY', 'EdnukwNIxts', 'lZICy2MnsWQ', 'PkYSPnbKlyA', 'TgB4eTcQhNo', 'YcUUhb4CxyY', '-V5piJzzPyI', 'NIuBUl-v_4k', 'y4xyk5LRAxw', 'RhRt73_hnZk', 'JhoSHmPRqRs'];
   const promoted = allVideos[0]?.youtubeId === 'vfZAlaoPvt0' ? [allVideos[0]] : [];
   const selection = [...promoted, ...preferredIds.map(id => allVideos.find(item => item.youtubeId === id)).filter(Boolean)];
   const selectedIds = new Set(selection.map(item => item.youtubeId));
@@ -113,6 +113,7 @@ function renderVideos(expanded = false) {
         <h3>${escapeHtml(item.title)}</h3>
         <p>${escapeHtml(item.description)}</p>
         <a class="text-link" href="${escapeHtml(item.source || "https://www.youtube.com/watch?v=" + item.youtubeId)}" target="_blank" rel="noopener noreferrer">在 ${item.platform === "instagram" ? "Instagram" : "YouTube"} 觀看 ↗</a>
+        ${item.instagramLyrics ? `<a class="text-link" href="${escapeHtml(item.instagramLyrics)}" target="_blank" rel="noopener noreferrer">在 Instagram 讀中日對照歌詞 ↗</a>` : ""}
       </div>
     </article>
   `).join('');
@@ -127,8 +128,8 @@ function renderVideos(expanded = false) {
 async function loadPreviewData() {
   try {
     const [lessonResponse, videoResponse] = await Promise.all([
-      fetch('data/lessons.json?v=20261104c'),
-      fetch('data/daidai-videos.json?v=20261104')
+      fetch('data/lessons.json?v=20261109b'),
+      fetch('data/daidai-videos.json?v=20261109b')
     ]);
     if (!lessonResponse.ok || !videoResponse.ok) throw new Error('資料載入失敗');
     const lessons = await lessonResponse.json();
