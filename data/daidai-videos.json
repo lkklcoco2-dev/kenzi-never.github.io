@@ -1,5 +1,95 @@
 [
   {
+    "date": "2026.11.14",
+    "dateIso": "2026-11-14",
+    "title": "呆呆羊深夜食堂 - 雙口味瑪德蓮",
+    "type": "深夜食堂・Instagram Reel",
+    "description": "跟呆呆羊一起做原味與巧克力瑪德蓮，練習用「おいしそう」形容看起來很好吃的甜點。",
+    "source": "https://www.instagram.com/kenzi_never/reel/DfuV_dkhjqr/",
+    "platform": "instagram",
+    "observedAt": "2026-11-15"
+  },
+  {
+    "youtubeId": "-SO0HimxT4E",
+    "title": "呆呆羊深夜食堂 - 紅油炒手+酸辣湯",
+    "type": "深夜食堂・YouTube Shorts",
+    "source": "https://www.youtube.com/shorts/-SO0HimxT4E",
+    "description": "今晚的深夜食堂端上紅油炒手，配一碗酸辣湯。",
+    "observedAt": "2026-11-15",
+    "date": "2026.11.13",
+    "dateIso": "2026-11-13"
+  },
+  {
+    "youtubeId": "GIg0t907pKQ",
+    "title": "呆呆羊深夜食堂 - 絲瓜獅子頭",
+    "type": "深夜食堂・YouTube Shorts",
+    "source": "https://www.youtube.com/shorts/GIg0t907pKQ",
+    "description": "跟著呆呆羊看看絲瓜與獅子頭的家常搭配。",
+    "observedAt": "2026-11-15",
+    "date": "2026.11.12",
+    "dateIso": "2026-11-12"
+  },
+  {
+    "date": "2026.11.12",
+    "dateIso": "2026-11-12",
+    "title": "呆呆羊深夜食堂 - 古早味卡哩卡哩",
+    "type": "深夜食堂・Instagram Reel",
+    "description": "從剛炸好的卡哩卡哩，認識日文形容不同脆感的擬態語。",
+    "source": "https://www.instagram.com/kenzi_never/reel/DfpM-xphoRs/",
+    "platform": "instagram",
+    "observedAt": "2026-11-15"
+  },
+  {
+    "youtubeId": "wdhOE6IX-VA",
+    "title": "呆呆羊深夜食堂 - 威靈頓牛排",
+    "type": "深夜食堂・YouTube Shorts",
+    "source": "https://www.youtube.com/shorts/wdhOE6IX-VA",
+    "description": "跟著呆呆羊看這道用酥皮包裹牛排的料理。",
+    "observedAt": "2026-11-15",
+    "date": "2026.11.11",
+    "dateIso": "2026-11-11"
+  },
+  {
+    "date": "2026.11.11",
+    "dateIso": "2026-11-11",
+    "title": "呆呆羊深夜食堂 - 藥膳香菇雞湯",
+    "type": "深夜食堂・Instagram Reel",
+    "description": "從一碗熱雞湯，分辨「變暖」和「把東西加熱」的日文說法。",
+    "source": "https://www.instagram.com/kenzi_never/reel/DfmoMkMhSfB/",
+    "platform": "instagram",
+    "observedAt": "2026-11-15"
+  },
+  {
+    "youtubeId": "8vqlvhjr0Tg",
+    "title": "呆呆羊深夜食堂 - 長崎蜂蜜蛋糕",
+    "type": "深夜食堂・YouTube Shorts",
+    "source": "https://www.youtube.com/shorts/8vqlvhjr0Tg",
+    "description": "今晚的點心是帶著蜂蜜香氣的長崎蛋糕。",
+    "observedAt": "2026-11-15",
+    "date": "2026.11.10",
+    "dateIso": "2026-11-10"
+  },
+  {
+    "youtubeId": "rrVnR67863c",
+    "title": "呆呆羊深夜食堂 - 豆皮烏龍",
+    "type": "深夜食堂・YouTube Shorts",
+    "source": "https://www.youtube.com/shorts/rrVnR67863c",
+    "description": "跟著呆呆羊吃一碗暖呼呼的豆皮烏龍麵。",
+    "observedAt": "2026-11-15",
+    "date": "2026.11.09",
+    "dateIso": "2026-11-09"
+  },
+  {
+    "date": "2026.11.09",
+    "dateIso": "2026-11-09",
+    "title": "呆呆羊深夜食堂 - 起司瀑布炸雞",
+    "type": "深夜食堂・Instagram Reel",
+    "description": "跟著呆呆羊做唐揚雞，練習形容融化的起司與酥脆的炸衣。",
+    "source": "https://www.instagram.com/kenzi_never/reel/DfheqZ8h3z3/",
+    "platform": "instagram",
+    "observedAt": "2026-11-15"
+  },
+  {
     "youtubeId": "z6hsGozsl34",
     "title": "呆呆羊深夜食堂 - 巧克力鏡面",
     "type": "深夜食堂・YouTube Shorts",
