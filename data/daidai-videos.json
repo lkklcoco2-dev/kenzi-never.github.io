@@ -1,19 +1,53 @@
 [
   {
+    "youtubeId": "wHTQl64Xn1I",
+    "date": "2026.11.19",
+    "dateIso": "2026-11-19",
+    "title": "呆呆羊深夜食堂 - 壽喜燒",
+    "type": "深夜食堂・YouTube Shorts",
+    "source": "https://www.youtube.com/shorts/wHTQl64Xn1I",
+    "description": "跟著呆呆羊看一鍋熱騰騰的壽喜燒。",
+    "observedAt": "2026-11-20"
+  },
+  {
+    "youtubeId": "6mmc_SjVC7U",
+    "date": "2026.11.19",
+    "dateIso": "2026-11-19",
+    "title": "呆呆羊的午餐時間",
+    "type": "呆呆羊日常・YouTube Shorts",
+    "source": "https://www.youtube.com/shorts/6mmc_SjVC7U",
+    "description": "陪呆呆羊一起享用午餐。",
+    "observedAt": "2026-11-20"
+  },
+  {
     "youtubeId": "of8CjLuAqp4",
-    "title": "呆呆羊深夜食堂｜近期新作 1",
+    "date": "2026.11.18",
+    "dateIso": "2026-11-18",
+    "title": "呆呆羊深夜食堂 - 提拿米蘇",
     "type": "深夜食堂・YouTube Shorts",
     "source": "https://www.youtube.com/shorts/of8CjLuAqp4",
-    "description": "呆呆羊深夜食堂新作品。影片名稱與發布日期核對後更新。",
+    "description": "今晚的甜點是提拿米蘇。",
     "observedAt": "2026-11-19"
   },
   {
     "youtubeId": "8fSLPKZiXsg",
-    "title": "呆呆羊深夜食堂｜近期新作 2",
+    "date": "2026.11.17",
+    "dateIso": "2026-11-17",
+    "title": "呆呆羊深夜食堂 - 車輪餅",
     "type": "深夜食堂・YouTube Shorts",
     "source": "https://www.youtube.com/shorts/8fSLPKZiXsg",
-    "description": "呆呆羊深夜食堂新作品。影片名稱與發布日期核對後更新。",
+    "description": "跟著呆呆羊一起吃車輪餅。",
     "observedAt": "2026-11-19"
+  },
+  {
+    "youtubeId": "FrXT8OMChF4",
+    "date": "2026.11.16",
+    "dateIso": "2026-11-16",
+    "title": "呆呆羊深夜食堂 - 起司蛋糕",
+    "type": "深夜食堂・YouTube Shorts",
+    "source": "https://www.youtube.com/shorts/FrXT8OMChF4",
+    "description": "跟著呆呆羊享用起司蛋糕。",
+    "observedAt": "2026-11-20"
   },
   {
     "date": "2026.11.14",

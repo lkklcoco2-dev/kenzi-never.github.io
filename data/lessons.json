@@ -1,36 +1,50 @@
 [
   {
-    "date": "2026.11.19",
-    "dateIso": "2026-11-19",
-    "title": "考前衝刺補充｜重點複習（一）",
-    "category": "JLPT 考前衝刺・補充教學",
-    "summary": "考前快速複習的補充內容，點選原文查看完整圖卡與解說。",
+    "date": "2026.11.18",
+    "dateIso": "2026-11-18",
+    "title": "「私はやります」和「私がやります」差在哪？",
+    "category": "助詞比較・は／が",
+    "summary": "用「你打算怎麼做？」和「誰來做？」兩種對話，分辨「は」提示話題與「が」聚焦行為人的用法。",
     "source": "https://www.instagram.com/p/Df4a3MzvTex/",
     "level": "JLPT 考前複習",
     "featured": true,
-    "needsArticlePage": false
+    "needsArticlePage": false,
+    "keywords": [
+      "は",
+      "が"
+    ]
   },
   {
-    "date": "2026.11.19",
-    "dateIso": "2026-11-19",
-    "title": "考前衝刺補充｜重點複習（二）",
-    "category": "JLPT 考前衝刺・補充教學",
-    "summary": "考前快速複習的補充內容，點選原文查看完整圖卡與解說。",
+    "date": "2026.11.17",
+    "dateIso": "2026-11-17",
+    "title": "初級日文｜自動詞與他動詞考前速記",
+    "category": "文法比較・自他動詞",
+    "summary": "用「ドアが開く／ドアを開ける」等例句，從事物的變化和動作的對象判斷，再用「が／を」核對。",
     "source": "https://www.instagram.com/p/Df1zNsXkyEr/",
     "level": "JLPT 考前複習",
     "featured": true,
-    "needsArticlePage": false
+    "needsArticlePage": false,
+    "keywords": [
+      "自動詞",
+      "他動詞",
+      "が",
+      "を"
+    ]
   },
   {
-    "date": "2026.11.19",
-    "dateIso": "2026-11-19",
-    "title": "考前衝刺補充｜重點複習（三）",
-    "category": "JLPT 考前衝刺・補充教學",
-    "summary": "考前快速複習的補充內容，點選原文查看完整圖卡與解說。",
+    "date": "2026.11.16",
+    "dateIso": "2026-11-16",
+    "title": "「この薬は体にいい」為什麼用「に」？",
+    "category": "助詞比較・に／が",
+    "summary": "用「体にいい」和「体の調子がいい」比較：前者說明對什麼有益，後者描述哪個狀態良好。",
     "source": "https://www.instagram.com/p/DfzSTmND_tY/",
     "level": "JLPT 考前複習",
     "featured": true,
-    "needsArticlePage": false
+    "needsArticlePage": false,
+    "keywords": [
+      "にいい",
+      "がいい"
+    ]
   },
   {
     "date": "2026.11.14",
