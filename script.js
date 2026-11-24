@@ -99,9 +99,10 @@ function renderVideos(expanded = false) {
   // Preview different series without hiding the rest of the collection.
   const preferredIds = ['wHTQl64Xn1I', '6mmc_SjVC7U', 'of8CjLuAqp4', '8fSLPKZiXsg', 'FrXT8OMChF4', '-SO0HimxT4E', 'GIg0t907pKQ', 'wdhOE6IX-VA', '8vqlvhjr0Tg', 'rrVnR67863c', 'vBgrB8kxn8g', 'z6hsGozsl34', 'AG3pSFWNrj8', 'hJxBRk1gtrU', 'KMoccZB62wU', '36iHXYyEueA', 'tlTJGAlM-HY', 'EdnukwNIxts', 'lZICy2MnsWQ', 'PkYSPnbKlyA', 'TgB4eTcQhNo', 'YcUUhb4CxyY', '-V5piJzzPyI', 'NIuBUl-v_4k', 'y4xyk5LRAxw', 'RhRt73_hnZk', 'JhoSHmPRqRs'];
   const promoted = allVideos[0]?.youtubeId === 'vfZAlaoPvt0' ? [allVideos[0]] : [];
-  const selection = [...promoted, ...preferredIds.map(id => allVideos.find(item => item.youtubeId === id)).filter(Boolean)];
-  const selectedIds = new Set(selection.map(item => item.youtubeId));
-  const previewVideos = [...selection, ...allVideos.filter(item => !selectedIds.has(item.youtubeId))].slice(0, visibleVideoCount);
+  const featured = allVideos.filter(item => item.featured);
+  const preferred = preferredIds.map(id => allVideos.find(item => item.youtubeId === id)).filter(Boolean);
+  const selection = new Set([...promoted, ...featured, ...preferred]);
+  const previewVideos = [...selection, ...allVideos.filter(item => !selection.has(item))].slice(0, visibleVideoCount);
   const displayedVideos = expanded ? allVideos : previewVideos;
   videoGrid.innerHTML = displayedVideos.map(item => `
     <article class="video-card reveal">
@@ -128,8 +129,8 @@ function renderVideos(expanded = false) {
 async function loadPreviewData() {
   try {
     const [lessonResponse, videoResponse] = await Promise.all([
-      fetch('data/lessons.json?v=20261120'),
-      fetch('data/daidai-videos.json?v=20261120')
+      fetch('data/lessons.json?v=20261125'),
+      fetch('data/daidai-videos.json?v=20261125')
     ]);
     if (!lessonResponse.ok || !videoResponse.ok) throw new Error('資料載入失敗');
     const lessons = await lessonResponse.json();
